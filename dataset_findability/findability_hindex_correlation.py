@@ -49,14 +49,17 @@ def get_visibility_index(domains):
             if response.status_code == 403:
                 return pd.DataFrame()
             else:
-                root= ET.fromstring(response.content)
-                for child in root.iter('*'):
-                    if child.tag == 'answer': 
-                        for tag in child:
-                            h_value = tag.get('value')
-                            if h_value is not None:
-                                visibility = {'domain':domain,'country':country_code,'visibility_index':float(h_value)}
-                                visibilities.append(visibility)
+                try:
+                    root= ET.fromstring(response.content)
+                    for child in root.iter('*'):
+                        if child.tag == 'answer': 
+                            for tag in child:
+                                h_value = tag.get('value')
+                                if h_value is not None:
+                                    visibility = {'domain':domain,'country':country_code,'visibility_index':float(h_value)}
+                                    visibilities.append(visibility)
+                except:
+                    return pd.DataFrame()
     return pd.DataFrame(visibilities, columns=['domain', 'country', 'visibility_index'])
                 
 if __name__ == "__main__":
@@ -69,10 +72,10 @@ if __name__ == "__main__":
 
         domains = dois_domains['domain'].unique()
         visibility = get_visibility_index(domains)
-        visibility.to_csv(f"visibility_{category}.csv", index=False)#Get the visibility index for wach domain among different countries
         if visibility.empty: #if no access to sistrix api use the file  
             visibility = pd.read_csv(f"visibility_{category}.csv") 
-        
+        else:
+            visibility.to_csv(f"visibility_{category}.csv", index=False)#Get the visibility index for wach domain among different countries
         average_visibility = visibility.groupby('domain')['visibility_index'].mean().reset_index()#Get the average visibility index of each domain among countries
         filtered_dois = dois_domains[dois_domains['status'] == str(1)] # filter dois that we found domain for them
         
