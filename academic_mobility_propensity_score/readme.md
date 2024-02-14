@@ -43,7 +43,13 @@ Here is a sample of input data:
 ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/sample_data.PNG)
 
 ### Sample Output
-Sample output includes standardized mean differences (SMD) for unmatched and matched data, as well as mean differences, t-values, and standard errors for variables of interest.
+Sample output includes standardized mean differences (SMD) for unmatched and matched data, as well as mean differences, t-values, and standard errors for variables of interest. The output for the real data has been presented in the paper[The many facets of academic mobility and its impact on scholars' career](https://doi.org/10.1016/j.joi.2022.101280) in tables 6 and 7. Here is a screenshot from the tables:
+SMD:
+![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/output_SMD.PNG)
+
+Main difference:
+![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/output_mainDiff.PNG)
+
 
 ### How to Use
 1. Load the input dataset into R.
