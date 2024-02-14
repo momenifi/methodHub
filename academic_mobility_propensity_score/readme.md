@@ -43,13 +43,28 @@ Here is a sample of input data:
 ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/sample_data.PNG)
 
 ### Sample Output
-Sample output includes standardized mean differences (SMD) for unmatched and matched data, as well as mean differences, t-values, and standard errors for variables of interest.
+Sample output includes standardized mean differences (SMD) for unmatched and matched data, as well as mean differences, t-values, and standard errors for variables of interest. The output for the real data has been presented in the paper[The many facets of academic mobility and its impact on scholars' career](https://doi.org/10.1016/j.joi.2022.101280) in tables 6 and 7. Here is a screenshot from the tables:
+
+**SMD:**
+
+![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/output_SMD.PNG)
+
+
+**Main difference:**
+
+![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/output_mainDiff.PNG)
+
 
 ### How to Use
-1. Load the input dataset into R.
-2. Define the treatment variable and covariates.
-3. Call the `perform_propensity_matching` function to conduct propensity score matching.
-4. Call the `calculate_mean_diff` function to calculate mean differences for variables of interest.
+1. Download  "mydata_sample.csv", "propensity_matching_functions.R", and "main_script.R" in a one folder.
+2. Run the commands in "main_script.R"
+    - Load the input dataset into R (data_sample) (lines 1 to 5)
+    - Define the functions (line 8)
+    - Define the treatment variable (treatment_var) and covariates (covariates)(lines 11 and 12)
+    - Call the `perform_propensity_matching` function to conduct propensity score matching (line 15) with parameters data_sample, treatment_var, and covariates.  
+      The output contains SMDs of unmatched/matched data (unmatched_smd in line 20)/matched_smd in line 21) and 
+    - Define the variables of interest (vars_of_interest) (line 29) and Matched data (matched_data in line 24)
+    - Call the `calculate_mean_diff` function to calculate mean differences for variables of interest (line 33) with parameteres matched_data, treatment_var, and vars_of_interest. The output gets the mean differences of vars_of_interest. 
 
 ## Specifics
 ### Contact Details
