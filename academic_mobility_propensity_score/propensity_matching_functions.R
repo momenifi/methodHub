@@ -1,3 +1,12 @@
+# Check if libraries are installed, if not, install them
+if (!requireNamespace("Matching", quietly = TRUE)) {
+  install.packages("Matching")
+}
+
+if (!requireNamespace("tableone", quietly = TRUE)) {
+  install.packages("tableone")
+}
+
 library(Matching)
 library(tableone)
 
@@ -69,37 +78,4 @@ calculate_mean_diff <- function(data, treatment_var, vars_of_interest) {
   return(result_df)
 }
 
-
-# Example usage:
-# Assuming 'data_sample' is your dataset containing relevant variables
-data_sample<-read.table("C:/Users/momenifi/Desktop/gitMethodHub/methodHub/academic_mobility_propensity_score/mydata_sample.csv",header=TRUE,sep=",",quote="\r",dec = ".")
-
-
-# Define variables
-treatment_var <- "mobile"  # Specify your treatment variable
-covariates <- c("REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", "age")
-
-# Perform propensity score matching
-matching_results <- perform_propensity_matching(data = data_sample,
-                                                treatment_var = treatment_var,
-                                                covariates = covariates)
-
-
-# Access SMDs of unmatched and matched data
-unmatched_smd <- matching_results$unmatched_smd
-matched_smd <- matching_results$matched_smd
-matched_data <- matching_results$matched_data
-
-# Print SMDs
-print(unmatched_smd)
-print(matched_smd)
-
-
-vars_of_interest <- c("PPY", "CPP", "COPP")  # Specify variables for mean difference calculation
-
-# Calculate mean differences
-mean_diff <- calculate_mean_diff(data = matched_data, treatment_var = treatment_var, vars_of_interest = vars_of_interest)
-
-# Print mean differences
-print(mean_diff)
 
