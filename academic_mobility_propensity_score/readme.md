@@ -58,12 +58,12 @@ Sample output includes standardized mean differences (SMD) for unmatched and mat
 ### How to Use
 1. Download  "mydata_sample.csv", "propensity_matching_functions.R", and "main_script.R" in a one folder.
 2. Run the commands in "main_script.R"
-.   Load the input dataset into R (data_sample) (lines 1 to 5)
-    Define the functions (line 8)
-.   Define the treatment variable (treatment_var) and covariates (covariates)(lines 11 and 12)
-.   Call the `perform_propensity_matching` function to conduct propensity score matching (line 15) with parameters data_sample, treatment_var, and covariates
-   Define the variables of interest (vars_of_interest) (line 29)
-. Call the `calculate_mean_diff` function to calculate mean differences for variables of interest (line 32)
+    - Load the input dataset into R (data_sample) (lines 1 to 5)
+    - Define the functions (line 8)
+    - Define the treatment variable (treatment_var) and covariates (covariates)(lines 11 and 12)
+    - Call the `perform_propensity_matching` function to conduct propensity score matching (line 15) with parameters data_sample, treatment_var, and covariates
+    - Define the variables of interest (vars_of_interest) (line 29)
+    - Call the `calculate_mean_diff` function to calculate mean differences for variables of interest (line 32)
 
 ## Specifics
 ### Contact Details
