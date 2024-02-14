@@ -7,8 +7,8 @@ source(file.path(script_dir, "propensity_matching_functions.R"))
 data_sample <- read.table(file.path(script_dir, "mydata_sample.csv"), header = TRUE, sep = ",", quote = "\r", dec = ".")
 
 # Define variables
-treatment_var <- "mobile"  # Specify your treatment variable
-covariates <- c("REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", "age")
+treatment_var <- "MOBILE"  # Specify your treatment variable
+covariates <- c("REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", "AGE")
 
 # Perform propensity score matching
 matching_results <- perform_propensity_matching(data = data_sample,
