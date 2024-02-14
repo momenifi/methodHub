@@ -1,10 +1,11 @@
-
 # Get the directory path of the main_script.R
 script_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
-# Source the file containing functions and libraries
-source(file.path(script_dir, "propensity_matching_functions.R"))
+
 # Example usage:
 data_sample <- read.table(file.path(script_dir, "mydata_sample.csv"), header = TRUE, sep = ",", quote = "\r", dec = ".")
+
+# Source the file containing functions and libraries
+source(file.path(script_dir, "propensity_matching_functions.R"))
 
 # Define variables
 treatment_var <- "MOBILE"  # Specify your treatment variable
@@ -18,6 +19,8 @@ matching_results <- perform_propensity_matching(data = data_sample,
 # Access SMDs of unmatched and matched data
 unmatched_smd <- matching_results$unmatched_smd
 matched_smd <- matching_results$matched_smd
+
+# Matched data
 matched_data <- matching_results$matched_data
 
 # Print SMDs
