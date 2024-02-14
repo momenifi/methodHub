@@ -43,7 +43,7 @@ Here is a sample of input data:
 ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/sample_data.PNG)
 
 ### Sample Output
-Sample output includes standardized mean differences for unmatched and matched data, as well as mean differences, t-values, and standard errors for variables of interest.
+Sample output includes standardized mean differences (SMD) for unmatched and matched data, as well as mean differences, t-values, and standard errors for variables of interest.
 
 ### How to Use
 1. Load the input dataset into R.
