@@ -39,6 +39,8 @@ This method can work with any dataset containing variables of interest, a treatm
 
 ### Sample Input Data
 Sample input data can be provided in CSV format with columns representing variables of interest, treatment indicator, and covariates (data_sample.csv).
+Here is a sample of input data:
+![Image Alt Text](https://link.to/your/image.jpg)
 
 ### Sample Output
 Sample output includes standardized mean differences for unmatched and matched data, as well as mean differences, t-values, and standard errors for variables of interest.
