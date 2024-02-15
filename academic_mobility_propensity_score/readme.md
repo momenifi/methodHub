@@ -5,7 +5,7 @@
 The propensity score matching method is used to estimate the causal effect of a treatment, intervention, or exposure by balancing covariates between treatment and control groups. It aims to reduce bias and confounding in observational studies by creating comparable groups based on propensity scores.
 
 It is used to construct control/treatment groups in scientific studies, in such a way that individuals in the control group are as similar as possible to individuals in the treatment group. 
-![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/ps_explanation.PNG)
+![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/PS_explanation.jpg)
 
 In this example, this method is employed to estimate the causal effect of academic mobility on research productivity and collaboration indicators among researchers. Academic mobility, represented by the treatment variable "mobile," distinguishes between researchers who have experienced academic mobility to other countries (mobile = 1) and those who have not (mobile = 0). The method aims to balance covariates such as region, main field of study, international co-authorship, gender, GDP per capita of the researcher's origin country, and age, between mobile and non-mobile researchers. By balancing covariates through propensity score matching, the method allows for a more accurate assessment of the impact of academic mobility on key research metrics, including CPP (citations per paper), PPY (number of papers per year), and COPP (co-authors per paper).
 
