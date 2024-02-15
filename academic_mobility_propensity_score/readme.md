@@ -39,7 +39,7 @@ This method can work with any dataset containing variables of interest, a treatm
 
 ### Sample Input Data
 Sample input data can be provided in CSV format with columns representing variables of interest, treatment indicator, and covariates (data_sample.csv).
-Here is a sample of input data:
+Here is a screenshot of sample input data:
 ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/sample_data.PNG)
 
 ### Sample Output
