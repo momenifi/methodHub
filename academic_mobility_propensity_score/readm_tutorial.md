@@ -67,9 +67,7 @@ install.packages("tableone")
 - Outcome Analysis
 - Interpretation of Results
 
-#### Usage
-
-**How to Use**
+#### How to Use
 
 To utilize the propensity score matching technique for assessing the impact of academic mobility on research productivity and collaboration indicators, follow these steps:
 In this example, this method is employed to estimate the causal effect of academic mobility on research productivity, recieved citations and collaboration indicators among researchers. Academic mobility, represented by the treatment variable "mobile," distinguishes between researchers who have experienced academic mobility to other countries (mobile = 1) and those who have not (mobile = 0). The method aims to balance covariates such as region, main field of study, international co-authorship, gender, GDP per capita of the researcher's origin country, and age, between mobile and non-mobile researchers. By balancing covariates through propensity score matching, the method allows for a more accurate assessment of the impact of academic mobility on key research metrics, including CPP (citations per paper), PPY (number of papers per year), and COPP (co-authors per paper).
@@ -109,3 +107,34 @@ The Mean Difference for each variable of interest (CPP, PPY, COPP) quantifies th
    - The output provides the mean differences of `vars_of_interest`.
 
 By following these steps, you can successfully conduct propensity score matching analysis to assess the impact of academic mobility on research productivity and collaboration indicators, focusing on the variables of interest "PPY", "CPP", and "COPP".
+
+
+
+
+
+#### Conclusion
+
+In conclusion, this tutorial has provided a detailed overview of propensity score matching techniques and their application in assessing the impact of academic mobility on research productivity and collaboration indicators. By following the step-by-step guide and example code provided, learners have gained a comprehensive understanding of how to implement propensity score matching in R and interpret the results effectively.
+
+#### How the Learning Goal is Achieved
+
+The learning goal of understanding and implementing propensity score matching techniques to assess the impact of academic mobility has been achieved through:
+
+- Introduction to the concept of propensity score matching.
+- Step-by-step instructions on data preparation, propensity score estimation, matching, and outcome analysis.
+- Hands-on experience with example code and explanations.
+- Interpretation of results and assessment of balance after matching.
+
+#### Skills Acquired with this Tutorial
+
+Upon completing this tutorial, learners have acquired the following skills:
+
+- Understanding of propensity score matching and its relevance in social science research.
+- Proficiency in using R programming language for propensity score matching analysis.
+- Ability to interpret standardized mean differences (SMDs) and mean differences in matched data.
+- Competence in assessing the impact of academic mobility on research productivity and collaboration indicators using propensity score matching.
+
+#### Concluding Remarks
+
+Propensity score matching is a powerful technique for estimating causal effects in observational studies, particularly in the context of social science research. By mastering this technique, researchers can overcome challenges associated with selection bias and confounding variables, leading to more robust and reliable research findings. We encourage learners to further explore advanced topics in propensity score matching and apply these skills to their own research endeavors.
+
