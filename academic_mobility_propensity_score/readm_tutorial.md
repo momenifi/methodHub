@@ -96,34 +96,65 @@ To utilize the propensity score matching technique for assessing the impact of a
    
    # Example usage:
    data_sample <- read.table(file.path(script_dir, "mydata_sample.csv"), header = TRUE, sep = ",", quote = "\r", dec = ".")
-   
-   # Source the file containing functions and libraries
-   source(file.path(script_dir, "propensity_matching_functions.R"))
    ```
     
-## Sample Input Data
+### Sample Input Data
 Sample input data can be provided in CSV format with columns representing variables of interest, treatment indicator, and covariates (data_sample.csv).
 Here is a screenshot of sample input data:
 ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/sample_data.PNG)
 
 
 4. **Define Functions:**
-   - Execute line 8 in "main_script.R" to define the necessary functions from "propensity_matching_functions.R".
+   - Execute this line in "main_script.R" to define the necessary functions from "propensity_matching_functions.R":
+     ```R
+     source(file.path(script_dir, "propensity_matching_functions.R"))
+     ```
 
 5. **Define Treatment Variable and Covariates:**
-   - Define the treatment variable (`treatment_var`) as "MOBILE" and covariates (`covariates`) as "REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", and "AGE" in lines 11 and 12 of "main_script.R".
+   - Define the treatment variable (`treatment_var`) as "MOBILE" and covariates (`covariates`) as "REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", and "AGE" in these lines of "main_script.R":
+     ```R
+        # Define variables
+         treatment_var <- "MOBILE"  # Specify your treatment variable
+         covariates <- c("REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", "AGE")
+     ```
 
 6. **Perform Propensity Score Matching:**
-   - Call the `perform_propensity_matching` function in line 15 of "main_script.R" with parameters `data_sample`, `treatment_var`, and `covariates` to conduct propensity score matching.
-   - The output includes standardized mean differences (SMDs) of unmatched/matched data (`unmatched_smd` in line 20 and `matched_smd` in line 21) and the matched data (`matched_data` in line 24).
+   - Call the `perform_propensity_matching` function inthis line of "main_script.R" with parameters `data_sample`, `treatment_var`, and `covariates` to conduct propensity score matching:
+     ```R
+        # Perform propensity score matching
+         matching_results <- perform_propensity_matching(data = data_sample,
+                                                   treatment_var = treatment_var,
+                                                   covariates = covariates)
+     ```
+   - The output includes standardized mean differences (SMDs) of unmatched/matched data (`unmatched_smd` in line 20 and `matched_smd` in line 21):
+     ```R
+      # Access SMDs of unmatched and matched data
+      unmatched_smd <- matching_results$unmatched_smd
+      matched_smd <- matching_results$matched_smd
+     ```
+      and the matched data (`matched_data` in line 24):
+      ```R
+     # Matched data
+      matched_data <- matching_results$matched_data
+      ```
 
 7. **Define Variables of Interest:**
-   - Define the variables of interest (`vars_of_interest`) as "PPY", "CPP", and "COPP" in line 29 of "main_script.R".
-
+   - Define the variables of interest (`vars_of_interest`) as "PPY", "CPP", and "COPP" in line of "main_script.R":
+     ```R
+      vars_of_interest <- c("PPY", "CPP", "COPP")  # Specify variables for mean difference calculation
+     ```
+     
 8. **Calculate Mean Differences:**
    - Call the `calculate_mean_diff` function in line 33 of "main_script.R" with parameters `matched_data`, `treatment_var`, and `vars_of_interest` to calculate mean differences for the variables of interest.
+     ```R
+     # Calculate mean differences
+      mean_diff <- calculate_mean_diff(data = matched_data, treatment_var = treatment_var, vars_of_interest = vars_of_interest)
+     ```
    - The output provides the mean differences of `vars_of_interest`.
-
+     ```R
+      # Print mean differences
+      print(mean_diff)
+     ```
      Sample Output
       Sample output includes standardized mean differences (SMD) for unmatched and matched data, as well as mean differences, t-values, and standard errors for variables of interest. 
       
