@@ -4,7 +4,7 @@ Propensity Score Matching for Assessing Academic Mobility Impact: A Step-by-Step
 #### Upfront Information
 
 **Learning Goal:**  
-By the end of this tutorial, you will be able to understand and implement propensity score matching techniques to assess the impact of academic mobility on research productivity and collaboration indicators among researchers.
+By the end of this tutorial, you will be able to understand and implement propensity score matching techniques to assess the impact of academic mobility on research productivity, recieved citations and collaboration indicators among researchers.
 
 #### Learning Objectives:
 
@@ -72,6 +72,11 @@ install.packages("tableone")
 **How to Use**
 
 To utilize the propensity score matching technique for assessing the impact of academic mobility on research productivity and collaboration indicators, follow these steps:
+In this example, this method is employed to estimate the causal effect of academic mobility on research productivity, recieved citations and collaboration indicators among researchers. Academic mobility, represented by the treatment variable "mobile," distinguishes between researchers who have experienced academic mobility to other countries (mobile = 1) and those who have not (mobile = 0). The method aims to balance covariates such as region, main field of study, international co-authorship, gender, GDP per capita of the researcher's origin country, and age, between mobile and non-mobile researchers. By balancing covariates through propensity score matching, the method allows for a more accurate assessment of the impact of academic mobility on key research metrics, including CPP (citations per paper), PPY (number of papers per year), and COPP (co-authors per paper).
+
+SMD quantifies the standardized difference in means between two groups, typically the treatment and control groups, by dividing the difference in means by the standard deviation of the outcome variable. It is commonly used in propensity score matching to assess balance between groups, with a lower SMD indicating better balance and greater comparability in terms of covariates. SMD facilitates comparing effect sizes across different studies or analyses, especially when outcome variables have different scales. In the context of this method, SMD is calculated for both unmatched and matched data to evaluate the balance achieved after matching. The treatment group consists of researchers who have experienced academic mobility to other countries (mobile = 1), while the control group consists of researchers who have not experienced academic mobility (mobile = 0).
+
+The Mean Difference for each variable of interest (CPP, PPY, COPP) quantifies the average difference in these research productivity, recieved citations and collaboration indicators between mobile and non-mobile researchers. A positive Mean Difference indicates that mobile researchers, on average, have higher values of the respective metric compared to non-mobile researchers. For example, a positive Mean Difference in CPP suggests that mobile researchers receive more citations per paper than non-mobile researchers. Conversely, a negative Mean Difference indicates that mobile researchers, on average, have lower values of the respective metric compared to non-mobile researchers. Understanding the sign and magnitude of Mean Differences provides insights into the direction and magnitude of the impact of academic mobility on research productivity and collaboration indicators.
 
 1. **Download Files:**
    - Download the following files into a single folder:
