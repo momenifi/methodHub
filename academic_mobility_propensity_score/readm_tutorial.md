@@ -78,39 +78,39 @@ This method can work with any dataset containing variables of interest, a treatm
 
 To utilize the propensity score matching technique for assessing the impact of academic mobility on research productivity and collaboration indicators, follow these steps:
 
-1. **Download Files:**
+### 1. Download Files:
    - Download the following files into a single folder:
      - "mydata_sample.csv": Input dataset containing the relevant variables for analysis.
      - "propensity_matching_functions.R": R script containing functions for propensity score matching.
      - "main_script.R": R script for executing the analysis.
 
-2. **Run Commands in "main_script.R":**
+### 2. Run Commands in "main_script.R":
    - Open "main_script.R" in your R environment.
    - Run the commands sequentially to execute the analysis.
 
-3. **Load Input Dataset:**
+### 3. Load Input Dataset:
    - Execute lines in "main_script.R" to load the input dataset into R as `data_sample`.
-  ```R
-   # Get the directory path of the main_script.R
-   script_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
-   
-   # Example usage:
-   data_sample <- read.table(file.path(script_dir, "mydata_sample.csv"), header = TRUE, sep = ",", quote = "\r", dec = ".")
-   ```
-    
-### Sample Input Data
-Sample input data can be provided in CSV format with columns representing variables of interest, treatment indicator, and covariates (data_sample.csv).
-Here is a screenshot of sample input data:
-![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/sample_data.PNG)
+     ```R
+      # Get the directory path of the main_script.R
+      script_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
+      
+      # Example usage:
+      data_sample <- read.table(file.path(script_dir, "mydata_sample.csv"), header = TRUE, sep = ",", quote = "\r", dec = ".")
+      ```
+       
+   **Sample Input Data**
+   Sample input data can be provided in CSV format with columns representing variables of interest, treatment indicator, and covariates (data_sample.csv).
+   Here is a screenshot of sample input data:
+   ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/sample_data.PNG)
 
 
-4. **Define Functions:**
+### 4. Define Functions:
    - Execute this line in "main_script.R" to define the necessary functions from "propensity_matching_functions.R":
      ```R
      source(file.path(script_dir, "propensity_matching_functions.R"))
      ```
 
-5. **Define Treatment Variable and Covariates:**
+### 5. Define Treatment Variable and Covariates:
    - Define the treatment variable (`treatment_var`) as "MOBILE" and covariates (`covariates`) as "REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", and "AGE" in these lines of "main_script.R":
      ```R
         # Define variables
@@ -118,7 +118,7 @@ Here is a screenshot of sample input data:
          covariates <- c("REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", "AGE")
      ```
 
-6. **Perform Propensity Score Matching:**
+### 6. Perform Propensity Score Matching:
    - Call the `perform_propensity_matching` function inthis line of "main_script.R" with parameters `data_sample`, `treatment_var`, and `covariates` to conduct propensity score matching:
      ```R
         # Perform propensity score matching
@@ -138,13 +138,13 @@ Here is a screenshot of sample input data:
       matched_data <- matching_results$matched_data
       ```
 
-7. **Define Variables of Interest:**
+### 7. Define Variables of Interest:
    - Define the variables of interest (`vars_of_interest`) as "PPY", "CPP", and "COPP" in line of "main_script.R":
      ```R
       vars_of_interest <- c("PPY", "CPP", "COPP")  # Specify variables for mean difference calculation
      ```
      
-8. **Calculate Mean Differences:**
+### 8. Calculate Mean Differences:
    - Call the `calculate_mean_diff` function in line 33 of "main_script.R" with parameters `matched_data`, `treatment_var`, and `vars_of_interest` to calculate mean differences for the variables of interest.
      ```R
      # Calculate mean differences
@@ -155,10 +155,10 @@ Here is a screenshot of sample input data:
       # Print mean differences
       print(mean_diff)
      ```
-     Sample Output
+     **Sample Output**
       Sample output includes standardized mean differences (SMD) for unmatched and matched data, as well as mean differences, t-values, and standard errors for variables of interest. 
       
-      ** Standard Mean Deviation:**
+      **Standard Mean Deviation:**
       
       ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/output_SMD.PNG)
       
@@ -169,15 +169,15 @@ Here is a screenshot of sample input data:
       
       
       
-      By following these steps, you can successfully conduct propensity score matching analysis to assess the impact of academic mobility on research productivity and collaboration indicators, focusing on the variables of interest "PPY", "CPP", and "COPP".
+ By following these steps, you can successfully conduct propensity score matching analysis to assess the impact of academic mobility on research productivity and collaboration indicators, focusing on the variables of interest "PPY", "CPP", and "COPP".
       
 
 
 ## Conclusion
 
-In conclusion, this tutorial has provided a detailed overview of propensity score matching techniques and their application in assessing the impact of academic mobility on research productivity and collaboration indicators. By following the step-by-step guide and example code provided, learners have gained a comprehensive understanding of how to implement propensity score matching in R and interpret the results effectively.
+In conclusion, this tutorial provides a detailed overview of propensity score matching techniques and their application in assessing the impact of academic mobility on research productivity and collaboration indicators. By following the step-by-step guide and sample code provided, learners gain a comprehensive understanding of how to implement propensity score matching in R and interpret the results effectively.
 
-#### How the Learning Goal is Achieved
+**How the Learning Goal is Achieved**
 
 The learning goal of understanding and implementing propensity score matching techniques to assess the impact of academic mobility has been achieved through:
 
@@ -186,7 +186,7 @@ The learning goal of understanding and implementing propensity score matching te
 - Hands-on experience with example code and explanations.
 - Interpretation of results and assessment of balance after matching.
 
-#### Skills Acquired with this Tutorial
+**Skills Acquired with this Tutorial**
 
 Upon completing this tutorial, learners have acquired the following skills:
 
@@ -195,7 +195,7 @@ Upon completing this tutorial, learners have acquired the following skills:
 - Ability to interpret standardized mean differences (SMDs) and mean differences in matched data.
 - Competence in assessing the impact of academic mobility on research productivity and collaboration indicators using propensity score matching.
 
-#### Concluding Remarks
+**Concluding Remarks**
 
 Propensity score matching is a powerful technique for estimating causal effects in observational studies, particularly in the context of social science research. By mastering this technique, researchers can overcome challenges associated with selection bias and confounding variables, leading to more robust and reliable research findings. We encourage learners to further explore advanced topics in propensity score matching and apply these skills to their own research endeavors.
 
