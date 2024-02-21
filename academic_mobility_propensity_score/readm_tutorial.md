@@ -90,7 +90,16 @@ To utilize the propensity score matching technique for assessing the impact of a
 
 3. **Load Input Dataset:**
    - Execute lines 1 to 5 in "main_script.R" to load the input dataset into R as `data_sample`.
-  
+  ```R
+# Get the directory path of the main_script.R
+script_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
+
+# Example usage:
+data_sample <- read.table(file.path(script_dir, "mydata_sample.csv"), header = TRUE, sep = ",", quote = "\r", dec = ".")
+
+# Source the file containing functions and libraries
+source(file.path(script_dir, "propensity_matching_functions.R"))
+```
     
 ## Sample Input Data
 Sample input data can be provided in CSV format with columns representing variables of interest, treatment indicator, and covariates (data_sample.csv).
