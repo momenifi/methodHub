@@ -73,24 +73,6 @@ install.packages("tableone")
 ## Input Data (DBD datasets)
 This method can work with any dataset containing variables of interest, a treatment indicator, and covariates.
 
-## Sample Input Data
-Sample input data can be provided in CSV format with columns representing variables of interest, treatment indicator, and covariates (data_sample.csv).
-Here is a screenshot of sample input data:
-![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/sample_data.PNG)
-
-## Sample Output
-Sample output includes standardized mean differences (SMD) for unmatched and matched data, as well as mean differences, t-values, and standard errors for variables of interest. 
-
-** Standard Mean Deviation:**
-
-![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/output_SMD.PNG)
-
-
-**Mean difference:**
-
-![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/output_mainDiff.PNG)
-
-
 
 ## Step-wise Guide
 
@@ -108,6 +90,13 @@ To utilize the propensity score matching technique for assessing the impact of a
 
 3. **Load Input Dataset:**
    - Execute lines 1 to 5 in "main_script.R" to load the input dataset into R as `data_sample`.
+  
+    
+## Sample Input Data
+Sample input data can be provided in CSV format with columns representing variables of interest, treatment indicator, and covariates (data_sample.csv).
+Here is a screenshot of sample input data:
+![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/sample_data.PNG)
+
 
 4. **Define Functions:**
    - Execute line 8 in "main_script.R" to define the necessary functions from "propensity_matching_functions.R".
@@ -125,6 +114,19 @@ To utilize the propensity score matching technique for assessing the impact of a
 8. **Calculate Mean Differences:**
    - Call the `calculate_mean_diff` function in line 33 of "main_script.R" with parameters `matched_data`, `treatment_var`, and `vars_of_interest` to calculate mean differences for the variables of interest.
    - The output provides the mean differences of `vars_of_interest`.
+ Sample Output
+Sample output includes standardized mean differences (SMD) for unmatched and matched data, as well as mean differences, t-values, and standard errors for variables of interest. 
+
+** Standard Mean Deviation:**
+
+![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/output_SMD.PNG)
+
+
+**Mean difference:**
+
+![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/output_mainDiff.PNG)
+
+
 
 By following these steps, you can successfully conduct propensity score matching analysis to assess the impact of academic mobility on research productivity and collaboration indicators, focusing on the variables of interest "PPY", "CPP", and "COPP".
 
