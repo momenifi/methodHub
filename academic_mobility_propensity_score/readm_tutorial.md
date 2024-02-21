@@ -1,5 +1,5 @@
-# Tutorial Title
-Propensity Score Matching for Assessing Academic Mobility Impact: A Step-by-Step Guide using R
+# Propensity Score Matching for Assessing Academic Mobility Impact: A Step-by-Step Guide using R
+
 
 
 ##Learning Goal  
