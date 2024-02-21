@@ -52,7 +52,7 @@ Install the required R packages by running the following commands:
 ```R
 install.packages("Matching")
 install.packages("tableone")
-...
+```
 #### Flow Diagram
 
 [Include a flow diagram here if applicable]
