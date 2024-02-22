@@ -11,7 +11,7 @@
 
 ## Description
 
-This tutorial provides a comprehensive guide on using propensity score matching techniques in R to assess the impact of academic mobility on research productivity and collaboration indicators among researchers. It includes step-by-step instructions, example code, and explanations to facilitate understanding and implementation.
+This tutorial provides a comprehensive guide on using propensity score matching techniques in R to assess the impact of academic mobility on research productivity, received citations, and collaboration indicators among researchers. It includes step-by-step instructions, example code, and explanations to facilitate understanding and implementation.
 
 In this example, the propensity score method is employed to estimate the causal effect of academic mobility on researchers' outcomes in terms of: 
 - Research productivity
@@ -28,7 +28,7 @@ Academic mobility, represented by the treatment variable *"MOBILE"*, distinguish
 The *Mean Difference* for each variable of interest (CPP, PPY, COPP) quantifies the average difference in these research productivity, received citations, and collaboration indicators between mobile and non-mobile researchers. A positive Mean Difference indicates that mobile researchers, on average, have higher values of the respective metric than non-mobile researchers and vice versa. For example, 
 - A *positive Mean Difference* in CPP suggests that mobile researchers receive more citations per paper than non-mobile researchers.
 - A *negative Mean Difference* indicates that mobile researchers, on average, have lower values of the respective metric than non-mobile researchers.
-Understanding the sign and magnitude of *Mean Differences* provides insights into the direction and magnitude of the impact of academic mobility on research productivity and collaboration indicators.
+Understanding the sign and magnitude of *Mean Differences* provides insights into the direction and magnitude of the impact of academic mobility on research productivity, received citations, and collaboration indicators.
 
 ## Target Audience
 
@@ -75,7 +75,7 @@ This method can work with any dataset containing variables of interest, a treatm
 
 ## Step-wise Guide
 
-To utilize the propensity score matching technique for assessing the impact of academic mobility on research productivity and collaboration indicators, follow these steps:
+To utilize the propensity score matching technique for assessing the impact of academic mobility on research productivity, received citations, and collaboration indicators, follow these steps:
 
 ### 1. Download Files:
    - Download the following files into a single folder:
@@ -174,7 +174,7 @@ To utilize the propensity score matching technique for assessing the impact of a
 
 ## Conclusion
 
-In conclusion, this tutorial provides a detailed overview of propensity score matching techniques and their application in assessing the impact of academic mobility on research productivity and collaboration indicators. By following the step-by-step guide and sample code provided, learners gain a comprehensive understanding of how to implement propensity score matching in R and interpret the results effectively.
+In conclusion, this tutorial provides a detailed overview of propensity score matching techniques and their application in assessing the impact of academic mobility on research productivity, received citations, and collaboration indicators. By following the step-by-step guide and sample code provided, learners gain a comprehensive understanding of how to implement propensity score matching in R and interpret the results effectively.
 
 **How the Learning Goal is Achieved**
 
@@ -192,7 +192,7 @@ Upon completing this tutorial, learners have acquired the following skills:
 - Understanding of propensity score matching and its relevance in social science research.
 - Proficiency in using R programming language for propensity score matching analysis.
 - Ability to interpret standardized mean differences (SMDs) and mean differences in matched data.
-- Competence in assessing the impact of academic mobility on research productivity and collaboration indicators using propensity score matching.
+- Competence in assessing the impact of academic mobility on research productivity, received citations, and collaboration indicators using propensity score matching.
 
 **Concluding Remarks**
 
