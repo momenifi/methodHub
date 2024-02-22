@@ -71,7 +71,8 @@ install.packages("tableone")
 [Include a flow diagram here if applicable]
 
 ## Input Data (DBD datasets)
-This method can work with any dataset containing variables of interest, a treatment indicator, and covariates.
+This method can work with any dataset containing variables of interest, a treatment indicator, and covariates. For example:
+- [The 'Call me sexist but' Dataset (CMSB)](https://search.gesis.org/research_data/SDN-10.7802-2251?doi=10.7802/2251) to Assessing the Impact of Gender Bias in Social Media Posts.
 
 
 ## Step-wise Guide
