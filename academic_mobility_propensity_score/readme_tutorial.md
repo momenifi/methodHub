@@ -17,12 +17,13 @@ In this example, the propensity score method is employed to estimate the causal 
 - Research productivity
 - Received citations 
 - Collaboration indicators
-Academic mobility, represented by the treatment variable *"mobile"*, distinguishes between researchers who have experienced academic mobility to other countries *(mobile = 1)* as the treatment group and those who have not *(mobile = 0)* as a control group. The method aims to balance covariates such as *region, main field of study, international co-authorship, gender, age, and origin country GDP per capita* of the researchers between mobile and non-mobile researchers. By balancing covariates through 'propensity score matching', the method allows for a more accurate assessment of the impact of academic mobility on outcomes mentioned above via indicators:
+- 
+Academic mobility, represented by the treatment variable *"MOBILE"*, distinguishes between researchers who have experienced academic mobility to other countries *(MOBILE = 1)* as the treatment group and those who have not *(mobile = 0)* as a control group. The method aims to balance covariates such as *region, main field of study, international co-authorship, gender, age, and origin country GDP per capita* of the researchers between mobile and non-mobile researchers. By balancing covariates through 'propensity score matching', the method allows for a more accurate assessment of the impact of academic mobility on outcomes mentioned above via indicators:
 - CPP (citations per paper)
 - PPY (number of papers per year)
 - COPP (co-authors per paper).
 
-*Standardized Mean Difference (SMD)* assesses the covariance balance between treatment and control groups before and after matching.  *SMD* is commonly used in *propensity score matching*, with a lower SMD indicating better balance and greater comparability regarding covariates. SMD facilitates comparing effect sizes across different studies or analyses, especially when outcome variables have different scales. In the context of this method, SMD is calculated for both unmatched and matched data to evaluate the balance achieved after matching. The treatment group consists of researchers who have experienced academic mobility to other countries (mobile = 1), while the control group consists of researchers who have not experienced academic mobility (mobile = 0).
+*Standardized Mean Difference (SMD)* assesses the covariance balance between treatment and control groups before and after matching.  *SMD* is commonly used in *propensity score matching*, with a lower SMD indicating better balance and greater comparability regarding covariates. SMD facilitates comparing effect sizes across different studies or analyses, especially when outcome variables have different scales. In the context of this method, SMD is calculated for both unmatched and matched data to evaluate the balance achieved after matching. The treatment group consists of researchers who have experienced academic mobility to other countries (MOBILE = 1), while the control group consists of researchers who have not experienced academic mobility (MOBILE = 0).
 
 The *Mean Difference* for each variable of interest (CPP, PPY, COPP) quantifies the average difference in these research productivity, received citations, and collaboration indicators between mobile and non-mobile researchers. A positive Mean Difference indicates that mobile researchers, on average, have higher values of the respective metric than non-mobile researchers and vice versa. For example, 
 - A *positive Mean Difference* in CPP suggests that mobile researchers receive more citations per paper than non-mobile researchers.
@@ -87,7 +88,7 @@ To utilize the propensity score matching technique for assessing the impact of a
    - Run the commands sequentially to execute the analysis.
 
 ### 3. Load Input Dataset:
-   - Execute lines in "main_script.R" to load the input dataset into R as `data_sample`.
+   - Execute the following lines to load the input dataset into R as `data_sample.`:
      ```R
       # Get the directory path of the main_script.R
       script_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
@@ -103,13 +104,13 @@ To utilize the propensity score matching technique for assessing the impact of a
 
 
 ### 4. Define Functions:
-   - Execute this line in "main_script.R" to define the necessary functions from "propensity_matching_functions.R":
+   - Execute this line to define the necessary functions from "propensity_matching_functions.R":
      ```R
      source(file.path(script_dir, "propensity_matching_functions.R"))
      ```
 
 ### 5. Define Treatment Variable and Covariates:
-   - Define the treatment variable (`treatment_var`) as "MOBILE" and covariates (`covariates`) as "REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", and "AGE" in these lines of "main_script.R":
+   - Define the treatment variable (`treatment_var`) as "MOBILE" and covariates (`covariates`) as "REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", and "AGE":
      ```R
         # Define variables
          treatment_var <- "MOBILE"  # Specify your treatment variable
@@ -117,27 +118,27 @@ To utilize the propensity score matching technique for assessing the impact of a
      ```
 
 ### 6. Perform Propensity Score Matching:
-   - Call the `perform_propensity_matching` function inthis line of "main_script.R" with parameters `data_sample`, `treatment_var`, and `covariates` to conduct propensity score matching:
+   - Call the `perform_propensity_matching` function with parameters `data_sample`, `treatment_var`, and `covariates` to conduct propensity score matching:
      ```R
         # Perform propensity score matching
          matching_results <- perform_propensity_matching(data = data_sample,
                                                    treatment_var = treatment_var,
                                                    covariates = covariates)
      ```
-   - The output includes standardized mean differences (SMDs) of unmatched/matched data (`unmatched_smd` in line 20 and `matched_smd` in line 21):
+   - The output includes standardized mean differences (SMDs) of unmatched/matched data (`unmatched_smd` and `matched_smd`):
      ```R
       # Access SMDs of unmatched and matched data
       unmatched_smd <- matching_results$unmatched_smd
       matched_smd <- matching_results$matched_smd
      ```
-      and the matched data (`matched_data` in line 24):
+      and the matched data:
       ```R
      # Matched data
       matched_data <- matching_results$matched_data
       ```
 
 ### 7. Define Variables of Interest:
-   - Define the variables of interest (`vars_of_interest`) as "PPY", "CPP", and "COPP" in line of "main_script.R":
+   - Define the variables of interest (`vars_of_interest`) as "PPY", "CPP", and "COPP":
      ```R
       vars_of_interest <- c("PPY", "CPP", "COPP")  # Specify variables for mean difference calculation
      ```
