@@ -22,14 +22,11 @@ Academic mobility, represented by the treatment variable *"mobile"*, distinguish
 - PPY (number of papers per year)
 - COPP (co-authors per paper).
 
-What is the need for SMD???
+*Standardized Mean Difference (SMD)* assesses the covariance balance between treatment and control groups before and after matching.  *SMD* is commonly used in *propensity score matching*, with a lower SMD indicating better balance and greater comparability regarding covariates. SMD facilitates comparing effect sizes across different studies or analyses, especially when outcome variables have different scales. In the context of this method, SMD is calculated for both unmatched and matched data to evaluate the balance achieved after matching. The treatment group consists of researchers who have experienced academic mobility to other countries (mobile = 1), while the control group consists of researchers who have not experienced academic mobility (mobile = 0).
 
-
-*SMD* quantifies the standardized mean difference between two groups, typically the treatment and control groups. It divides the mean difference by the standard deviation of the outcome variable. It is commonly used in *propensity score matching* to assess balance between groups, with a lower SMD indicating better balance and greater comparability in terms of covariates??????. SMD facilitates comparing effect sizes across different studies or analyses, especially when outcome variables have different scales. In the context of this method, SMD is calculated for both unmatched and matched data to evaluate the balance achieved after matching. The treatment group consists of researchers who have experienced academic mobility to other countries (mobile = 1), while the control group consists of researchers who have not experienced academic mobility (mobile = 0).
-
-The *Mean Difference* for each variable of interest (CPP, PPY, COPP) quantifies the average difference in these research productivity, received citations, and collaboration indicators between mobile and non-mobile researchers. A positive Mean Difference indicates that mobile researchers, on average, have higher values of the respective metric compared to non-mobile researchers and vice versa. For example, 
+The *Mean Difference* for each variable of interest (CPP, PPY, COPP) quantifies the average difference in these research productivity, received citations, and collaboration indicators between mobile and non-mobile researchers. A positive Mean Difference indicates that mobile researchers, on average, have higher values of the respective metric than non-mobile researchers and vice versa. For example, 
 - A *positive Mean Difference* in CPP suggests that mobile researchers receive more citations per paper than non-mobile researchers.
-- A *negative Mean Difference* indicates that mobile researchers, on average, have lower values of the respective metric compared to non-mobile researchers.
+- A *negative Mean Difference* indicates that mobile researchers, on average, have lower values of the respective metric than non-mobile researchers.
 Understanding the sign and magnitude of *Mean Differences* provides insights into the direction and magnitude of the impact of academic mobility on research productivity and collaboration indicators.
 
 ## Target Audience
