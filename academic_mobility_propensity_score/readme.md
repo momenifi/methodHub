@@ -31,7 +31,7 @@ Install the required R packages:
 - tableone
 
 ### How to Use
-1. Download  ["mydata_sample.csv"]([https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/main_script.R](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/mydata_sample.csv), ["propensity_matching_functions.R"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/propensity_matching_functions.R), and ["main_script.R"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/main_script.R) in a one folder.
+1. Download  ["mydata_sample.csv"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/mydata_sample.csv), ["propensity_matching_functions.R"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/propensity_matching_functions.R), and ["main_script.R"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/main_script.R) in a one folder.
 2. Run the commands in "main_script.R"
     - Load the input dataset into R (data_sample) (lines 1 to 5)
     - Define the functions (line 8)
