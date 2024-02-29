@@ -1,4 +1,4 @@
-# Propensity Score Matching Method
+# Calculating Propensity Score Matching in R
 
 ## Description
 
