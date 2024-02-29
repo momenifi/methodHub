@@ -30,6 +30,18 @@ Install the required R packages:
 - Matching
 - tableone
 
+### How to Use
+1. Download  ["mydata_sample.csv"]([https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/main_script.R](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/mydata_sample.csv), ["propensity_matching_functions.R"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/propensity_matching_functions.R), and ["main_script.R"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/main_script.R) in a one folder.
+2. Run the commands in "main_script.R"
+    - Load the input dataset into R (data_sample) (lines 1 to 5)
+    - Define the functions (line 8)
+    - Define the treatment variable (treatment_var) and covariates (covariates)(lines 11 and 12)
+    - Call the `perform_propensity_matching` function to conduct propensity score matching (line 15) with parameters data_sample, treatment_var, and covariates.  
+      The output contains SMDs of unmatched/matched data (unmatched_smd in line 20)/matched_smd in line 21) and 
+    - Define the variables of interest (vars_of_interest) (line 29) and Matched data (matched_data in line 24)
+    - Call the `calculate_mean_diff` function to calculate mean differences for variables of interest (line 33) with parameteres matched_data, treatment_var, and vars_of_interest. The output gets the mean differences of vars_of_interest. 
+
+
 ## Usage
 ### Input Data (DBD datasets)
 This method can work with any dataset containing variables of interest, a treatment indicator, and covariates.
@@ -51,17 +63,6 @@ Sample output includes standardized mean differences (SMD) for unmatched and mat
 
 ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/output_mainDiff.PNG)
 
-
-### How to Use
-1. Download  "mydata_sample.csv", "propensity_matching_functions.R", and "main_script.R" in a one folder.
-2. Run the commands in "main_script.R"
-    - Load the input dataset into R (data_sample) (lines 1 to 5)
-    - Define the functions (line 8)
-    - Define the treatment variable (treatment_var) and covariates (covariates)(lines 11 and 12)
-    - Call the `perform_propensity_matching` function to conduct propensity score matching (line 15) with parameters data_sample, treatment_var, and covariates.  
-      The output contains SMDs of unmatched/matched data (unmatched_smd in line 20)/matched_smd in line 21) and 
-    - Define the variables of interest (vars_of_interest) (line 29) and Matched data (matched_data in line 24)
-    - Call the `calculate_mean_diff` function to calculate mean differences for variables of interest (line 33) with parameteres matched_data, treatment_var, and vars_of_interest. The output gets the mean differences of vars_of_interest. 
 
 ## Specifics
 ### Contact Details
