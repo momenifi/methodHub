@@ -18,7 +18,7 @@ In this example, the propensity score method is employed to estimate the causal 
 - Received citations 
 - Collaboration indicators
   
-Academic mobility, represented by the treatment variable *"MOBILE"*, distinguishes between researchers who have experienced academic mobility to other countries *(MOBILE = 1)* as the treatment group and those who have not *(mobile = 0)* as a control group. The method aims to balance covariates such as *region, main field of study, international co-authorship, gender, age, and origin country GDP per capita* of the researchers between mobile and non-mobile researchers. By balancing covariates through 'propensity score matching', the method allows for a more accurate assessment of the impact of academic mobility on outcomes mentioned above via indicators:
+Academic mobility, represented by the treatment variable *"MOBILE"*, distinguishes between researchers who have experienced academic mobility to other countries *(MOBILE = 1)* as the treatment group and those who have not *(MOBILE = 0)* as a control group. The method aims to balance covariates such as *region, main field of study, international co-authorship, gender, age, and origin country GDP per capita* of the researchers between mobile and non-mobile researchers. By balancing covariates through 'propensity score matching', the method allows for a more accurate assessment of the impact of academic mobility on outcomes mentioned above via indicators:
 - CPP (citations per paper)
 - PPY (number of papers per year)
 - COPP (co-authors per paper).
