@@ -15,7 +15,7 @@ It is used to construct control/treatment groups in scientific studies, in such 
 - **Academic Mobility of Researchers**: [Assessing the impact of academic mobility on scientific outcomes](https://doi.org/10.1016/j.joi.2022.101280)
 
 ## Structure
-The method consists of two main functions:
+The method consists of two main functions located in  ["propensity_matching_functions.R"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/propensity_matching_functions.R):
 1. `perform_propensity_matching`: Conducts propensity score matching and calculates standardized mean differences (SMDs) for unmatched and matched data.
 2. `calculate_mean_diff`: Calculates mean differences, t-values, and standard errors for variables of interest between treatment and control groups.
 
