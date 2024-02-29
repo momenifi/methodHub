@@ -12,6 +12,7 @@ It is used to construct control/treatment groups in scientific studies, in such 
 - **Healthcare Interventions**: Evaluating the effectiveness of medical treatments on patient outcomes.
 - **Labor Market Studies**: Analyzing the effects of job training programs on employment outcomes.
 - **Social Program Evaluations**: Assessing the outcomes of social interventions on poverty alleviation.
+- **Academic Mobility Outcomes**: Assessing the impact of academic mobility on scientific outcomes.
 
 ## Structure
 The method consists of two main functions:
