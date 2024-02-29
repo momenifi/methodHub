@@ -24,7 +24,7 @@ Propensity score matching, Causal inference, Observational studies, Social scien
 
 ## Setup
 ### Environment Setup
-To run this method locally, ensure you have R installed on your system.
+To run this method locally, ensure you have R (version  3.6.0 or higher) installed on your system.
 
 ### Installing Dependencies
 Install the required R packages:
