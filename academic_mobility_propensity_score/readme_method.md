@@ -8,11 +8,11 @@ It is used to construct control/treatment groups in scientific studies, in such 
 ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/PS_explanation.jpg)
 
 ## Social Science Use Cases
-- **Education Policy Evaluation**: Assessing the impact of educational interventions on student outcomes.
-- **Healthcare Interventions**: Evaluating the effectiveness of medical treatments on patient outcomes.
-- **Labor Market Studies**: Analyzing the effects of job training programs on employment outcomes.
-- **Social Program Evaluations**: Assessing the outcomes of social interventions on poverty alleviation.
-- **Academic Mobility Outcomes**: Assessing the impact of academic mobility on scientific outcomes.
+- **Education Policy Evaluation**: [Assessing the impact of educational interventions on student outcomes](https://telearn.hal.science/hal-00190019/document)
+- **Healthcare Interventions**: [Evaluating the effectiveness of medical treatments on patient outcomes](https://www.tandfonline.com/doi/pdf/10.1080/00273171.2011.568786)
+- **Labor Market Studies**: [Analyzing the effects of job training programs on employment outcomes](https://www.nber.org/system/files/working_papers/w6829/w6829.pdf)
+- **At-Risk Youth: Mentoring Program Impact**: [examine the impact of a mentoring program on academic achievement outcomes among at-risk youth](https://books.google.de/books?hl=de&lr=&id=5Y_MAwAAQBAJ&oi=fnd&pg=PP1&dq=Propensity+Score+Analysis:+Statistical+Methods+and+Applications.+Sage+Publications.&ots=WY57gK_A9w&sig=h8usM9tYzJGz-RRhnca-iyx0cnA#v=onepage&q=Propensity%20Score%20Analysis%3A%20Statistical%20Methods%20and%20Applications.%20Sage%20Publications.&f=false)
+- **Academic Mobility of Researchers**: Assessing the impact of academic mobility on scientific outcomes.
 
 ## Structure
 The method consists of two main functions:
