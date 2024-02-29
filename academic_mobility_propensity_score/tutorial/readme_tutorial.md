@@ -57,7 +57,7 @@ This tutorial addresses the technical challenge in social science research of as
 Setup
 
 ## Environment Setup (Installing dependencies) 
-Ensure you have R environment set up on your local machine.
+Ensure you have R (version 3.6.0 or higher) environment on your local machine.
 
 Install the required R packages by running the following commands:
 
