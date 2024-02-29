@@ -75,4 +75,4 @@ For questions or feedback, contact [fakhri.momeni@gesis.org](mailto:fakhri.momen
 ### Publication
 This method was utilized in the following paper:
 - [The many facets of academic mobility and its impact on scholars' career](https://doi.org/10.1016/j.joi.2022.101280)
-- Propensity score matching results can be found in Table 6 and Table 7.
+Propensity score matching results can be found in Table 6 and Table 7.
