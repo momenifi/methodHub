@@ -60,9 +60,9 @@ To utilize the propensity score matching technique for assessing the impact of j
 
 ### 1. Download Files:
    - Download the following files into a single folder:
-     - "job_training_data.csv": Input dataset containing the relevant variables for analysis.
-     - "propensity_matching_functions.R": R script containing functions for propensity score matching.
-     - "main_script.R": R script for executing the analysis.
+     - ["mydata_sample.csv"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/job_training_data.csv): Input dataset containing the relevant variables for analysis.
+     - ["propensity_matching_functions.R"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/propensity_matching_functions.R): R script containing functions for propensity score matching.
+     - ["main_script.R"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/main_script.R): R script for executing the analysis.
 
 ### 2. Run Commands in "main_script.R":
    - Open "main_script.R" in your R environment.
