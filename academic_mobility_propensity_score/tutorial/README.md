@@ -88,7 +88,7 @@ Here is a screenshot of the sample input data:
 source(file.path(script_dir, "propensity_matching_functions.R"))
 ```
 
-### 5. Define Treatment Variable and Covariates:
+### 5. Define the Treatment Variable and the Covariates:
    - Define the treatment variable (`treatment_var`) as "TREATED" and covariates (`covariates`) as relevant variables such as age, education level, and years of experience.
 ```R
 # Define variables
@@ -96,10 +96,9 @@ treatment_var <- "TREATED"  # Specify your treatment variable
 covariates <- c("AGE", "EDUCATION", "EXPERIENCE")  # Specify relevant covariates
 ```
 
-### 6. Perform Propensity Score Matching:
+### 6. Perform Propensity Score Matching and Get the Matched Data:
    - Call the `perform_propensity_matching` function with parameters `job_training_data`, `treatment_var`, and `covariates` to conduct propensity score matching:
-### 7. Perform Propensity Score Matching and Get the SMD for Unmatched and Matched Data:
-   - Perform propensity score matching
+   - 
 ```R
 matching_results <- perform_propensity_matching(data = job_training_data,
                                                    treatment_var = treatment_var,
@@ -111,7 +110,7 @@ matched_data <- matching_results$matched_data
 
 
 
-### 8. Compare the SMD in Unmatched and Matched Data:
+### 7. Compare the SMD in Unmatched and Matched Data:
 ```R
 # Access SMDs of unmatched and matched data
 unmatched_smd <- matching_results$unmatched_smd
@@ -125,7 +124,7 @@ print(matched_smd)
       By examining the SMD for unmatched and matched data under different covariances, we assess the effectiveness of the matching process in achieving balance between the treatment and control groups. A lower SMD indicates a smaller       difference between the two groups. For instance, in this example, the SMD for the variable "AGE" is 0.76 for unmatched data and 0.06 for matched data. This suggests that the treatment group in the matched data is more similar to the control group compared to the unmatched data.
       ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/output_SMD.PNG) 
 
-### 9. Define Variables of Interest:
+### 8. Define Variables of Interest:
    - Define the variables of interest (`vars_of_interest`) based on the employment outcomes you want to assess.
 ```R
 vars_of_interest <- c("EARNINGS_PRE", "EARNINGS_POST")  # Specify variables for mean difference calculation
@@ -134,7 +133,7 @@ vars_of_interest <- c("EARNINGS_PRE", "EARNINGS_POST")  # Specify variables for 
 
 
      
-### 10. Calculate Mean Differences:
+### 9. Calculate Mean Differences:
    - Call the `calculate_mean_diff` function with parameters `matched_data`, `treatment_var`, and `vars_of_interest` to calculate mean differences for the variables of interest.
 ```R
 # Calculate mean differences
