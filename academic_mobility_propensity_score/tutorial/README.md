@@ -80,6 +80,7 @@ To utilize the propensity score matching technique for assessing the impact of j
  **Sample Input Data**
    Sample input data can be provided in CSV format with columns representing variables of interest (EARNINGS_PRE, EARNINGS_POST), a treatment indicator (TREATED), and covariates (AGE, EDUCATION, EXPERIENCE).
 Here is a screenshot of the sample input data:
+
    ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/job_training_data.PNG)
 ### 4. Define Functions:
    - Execute this line to define the necessary functions from "propensity_matching_functions.R":
