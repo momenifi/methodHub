@@ -48,7 +48,7 @@ install.packages("Matching")
 install.packages("tableone")
 ```
 
-## Input Data
+## Input Data ([Digital behavior Data](https://www.gesis.org/en/institute/digital-behavioral-data))
 
 This method can work with any dataset containing variables of interest, a treatment indicator, and covariates. For example:
 - Sample data for job training program analysis.
