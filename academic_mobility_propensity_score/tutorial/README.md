@@ -65,11 +65,11 @@ To utilize the propensity score matching technique for assessing the impact of j
      - ["main_script.R"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/main_script.R): R script for executing the analysis.
 
 ### 2. Run Commands in "main_script.R":
-   - Open "main_script.R" in your R environment.
+   - Open ["main_script.R"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/main_script.R) in your R environment.
    - Run the commands sequentially to execute the analysis.
 
 ### 3. Load Input Dataset:
-   - Execute the following lines to load the input dataset into R as `job_training_data.`:
+   - Execute the following lines to load the input dataset into R as `job_training_data`:
      ```R
       # Get the directory path of the main_script.R
       script_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
@@ -78,7 +78,7 @@ To utilize the propensity score matching technique for assessing the impact of j
       job_training_data <- read.csv(file.path(script_dir, "job_training_data.csv"))
       ```
  **Sample Input Data**
-   Sample input data can be provided in CSV format with columns representing variables of interest (EARNINGS_PRE, EARNINGS_POST), a treatment indicator (TREATED), and covariates (AGE, EDUCATION, EXPERIENCE). (mydata_sample.csv).
+   Sample input data can be provided in CSV format with columns representing variables of interest (EARNINGS_PRE, EARNINGS_POST), a treatment indicator (TREATED), and covariates (AGE, EDUCATION, EXPERIENCE).
 Here is a screenshot of the sample input data:
    ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/job_training_data.PNG)
 ### 4. Define Functions:
