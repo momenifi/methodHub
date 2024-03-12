@@ -70,13 +70,13 @@ To utilize the propensity score matching technique for assessing the impact of j
 
 ### 3. Load Input Dataset:
    - Execute the following lines to load the input dataset into R as `job_training_data`:
-     ```R
-      # Get the directory path of the main_script.R
-      script_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
+```R
+# Get the directory path of the main_script.R
+script_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
       
-      # Example usage:
-      job_training_data <- read.csv(file.path(script_dir, "job_training_data.csv"))
-      ```
+# Example usage:
+job_training_data <- read.csv(file.path(script_dir, "job_training_data.csv"))
+```
  **Sample Input Data**
    Sample input data can be provided in CSV format with columns representing variables of interest (EARNINGS_PRE, EARNINGS_POST), a treatment indicator (TREATED), and covariates (AGE, EDUCATION, EXPERIENCE).
 Here is a screenshot of the sample input data:
