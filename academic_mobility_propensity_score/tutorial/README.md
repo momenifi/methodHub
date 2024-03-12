@@ -77,7 +77,10 @@ To utilize the propensity score matching technique for assessing the impact of j
       # Example usage:
       job_training_data <- read.csv(file.path(script_dir, "job_training_data.csv"))
       ```
-
+ **Sample Input Data**
+   Sample input data can be provided in CSV format with columns representing variables of interest (EARNINGS_PRE, EARNINGS_POST), a treatment indicator (TREATED), and covariates (AGE, EDUCATION, EXPERIENCE). (mydata_sample.csv).
+Here is a screenshot of the sample input data:
+   ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/job_training_data.PNG)
 ### 4. Define Functions:
    - Execute this line to define the necessary functions from "propensity_matching_functions.R":
      ```R
@@ -107,6 +110,25 @@ To utilize the propensity score matching technique for assessing the impact of j
      ```R
       vars_of_interest <- c("EARNINGS_PRE", "EARNINGS_POST")  # Specify variables for mean difference calculation
      ```
+### 8. Perform Propensity Score Matching and Get the Matched Data:
+   - Perform propensity score matching
+     ```R
+      matching_results <- perform_propensity_matching(data = job_training_data,
+                                                   treatment_var = treatment_var,
+                                                   covariates = covariates)
+     # Matched data
+      matched_data <- matching_results$matched_data
+     ```
+
+### 9. Compare the SMD in Unmatched and Matched Data:
+      ```R
+      # Print SMDs
+      print(unmatched_smd)
+      print(matched_smd)
+      ```
+      **Standard Mean Deviation:**
+      By examining the SMD for unmatched and matched data under different covariances, we assess the effectiveness of the matching process in achieving balance between the treatment and control groups. A lower SMD indicates a smaller       difference between the two groups. For instance, in this example, the SMD for the variable "AGE" is 0.76 for unmatched data and 0.06 for matched data. This suggests that the treatment group in the matched data is more similar to the control group compared to the unmatched data.
+      ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/output_SMD.PNG)
      
 ### 8. Calculate Mean Differences:
    - Call the `calculate_mean_diff` function with parameters `matched_data`, `treatment_var`, and `vars_of_interest` to calculate mean differences for the variables of interest.
@@ -115,10 +137,47 @@ To utilize the propensity score matching technique for assessing the impact of j
       mean_diff <- calculate_mean_diff(data = matched_data, treatment_var = treatment_var, vars_of_interest = vars_of_interest)
      ```
    - The output provides the mean differences of `vars_of_interest`.
-
+     ```R
+      # Print mean differences
+      print(mean_diff)
+     ```
+      **Mean difference:**
+      Example for the interpretation: A mean difference of -666.6 for the variable EARNINGS_PRE indicates that, on average, individuals who participated in the training program had earnings that were $666.6 less before the training program compared to those who did not participate in the training program. 
+Additionally, their earnings after the training program are, on average, $3000 more than those who did not participate in the training program, as indicated by the mean difference of 3000 for the variable EARNINGS_POST.
+      ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/output_mainDiff.PNG)
+      
+      
+      
+ By following these steps, you can successfully conduct propensity score matching analysis to assess the impact of academic mobility on research productivity and collaboration indicators, focusing on the variables of interest "PPY", "CPP", and "COPP".
 ## Conclusion
 
 In conclusion, this tutorial provides a detailed overview of propensity score matching techniques and their application in assessing the impact of job training programs on employment outcomes. By following the step-by-step guide and sample code provided, learners gain a comprehensive understanding of how to implement propensity score matching in R and interpret the results effectively.
 
-**References:**
-- [Sample Paper Title](https://example.com)
+## Conclusion
+
+In conclusion, this tutorial provides a detailed overview of propensity score matching techniques and their application in assessing the impact of academic mobility on research productivity, received citations, and collaboration indicators. By following the step-by-step guide and sample code provided, learners gain a comprehensive understanding of how to implement propensity score matching in R and interpret the results effectively.
+
+**How the Learning Goal is Achieved**
+
+The learning goal of understanding and implementing propensity score matching techniques to assess the impact of academic mobility has been achieved through:
+
+- Introduction to the concept of propensity score matching.
+- Step-by-step instructions on data preparation, propensity score estimation, matching, and outcome analysis.
+- Hands-on experience with example code and explanations.
+- Interpretation of results and assessment of balance after matching.
+
+**Skills Acquired with this Tutorial**
+
+Upon completing this tutorial, learners have acquired the following skills:
+
+- Understanding of propensity score matching and its relevance in social science research.
+- Proficiency in using R programming language for propensity score matching analysis.
+- Ability to interpret standardized mean differences (SMDs) and mean differences in matched data.
+- Competence in assessing the impact of academic mobility on research productivity, received citations, and collaboration indicators using propensity score matching.
+
+**Concluding Remarks**
+
+Propensity score matching is a powerful technique for estimating causal effects in observational studies, particularly in the context of social science research. By mastering this technique, researchers can overcome challenges associated with selection bias and confounding variables, leading to more robust and reliable research findings. We encourage learners to further explore advanced topics in propensity score matching and apply these skills to their own research endeavors.
+
+## References
+- [The many facets of academic mobility and its impact on scholars' career](https://doi.org/10.1016/j.joi.2022.101280)
