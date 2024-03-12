@@ -84,64 +84,64 @@ Here is a screenshot of the sample input data:
    ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/job_training_data.PNG)
 ### 4. Define Functions:
    - Execute this line to define the necessary functions from "propensity_matching_functions.R":
-     ```R
-     source(file.path(script_dir, "propensity_matching_functions.R"))
-     ```
+```R
+source(file.path(script_dir, "propensity_matching_functions.R"))
+```
 
 ### 5. Define Treatment Variable and Covariates:
    - Define the treatment variable (`treatment_var`) as "TREATED" and covariates (`covariates`) as relevant variables such as age, education level, and years of experience.
-     ```R
-        # Define variables
-         treatment_var <- "TREATED"  # Specify your treatment variable
-         covariates <- c("AGE", "EDUCATION", "EXPERIENCE")  # Specify relevant covariates
-     ```
+```R
+# Define variables
+treatment_var <- "TREATED"  # Specify your treatment variable
+covariates <- c("AGE", "EDUCATION", "EXPERIENCE")  # Specify relevant covariates
+```
 
 ### 6. Perform Propensity Score Matching:
    - Call the `perform_propensity_matching` function with parameters `job_training_data`, `treatment_var`, and `covariates` to conduct propensity score matching:
-     ```R
-        # Perform propensity score matching
-         matching_results <- perform_propensity_matching(data = job_training_data,
+```R
+# Perform propensity score matching
+matching_results <- perform_propensity_matching(data = job_training_data,
                                                    treatment_var = treatment_var,
                                                    covariates = covariates)
-     ```
+```
    - The output includes standardized mean differences (SMDs) of unmatched/matched data (`unmatched_smd` and `matched_smd`) and the matched data (`matched_data`).
 
 ### 7. Define Variables of Interest:
    - Define the variables of interest (`vars_of_interest`) based on the employment outcomes you want to assess.
-     ```R
-      vars_of_interest <- c("EARNINGS_PRE", "EARNINGS_POST")  # Specify variables for mean difference calculation
-     ```
+```R
+vars_of_interest <- c("EARNINGS_PRE", "EARNINGS_POST")  # Specify variables for mean difference calculation
+```
 ### 8. Perform Propensity Score Matching and Get the Matched Data:
    - Perform propensity score matching
-     ```R
-      matching_results <- perform_propensity_matching(data = job_training_data,
+```R
+matching_results <- perform_propensity_matching(data = job_training_data,
                                                    treatment_var = treatment_var,
                                                    covariates = covariates)
-     # Matched data
-      matched_data <- matching_results$matched_data
-     ```
+# Matched data
+matched_data <- matching_results$matched_data
+```
 
 ### 9. Compare the SMD in Unmatched and Matched Data:
-      ```R
-      # Print SMDs
-      print(unmatched_smd)
-      print(matched_smd)
-      ```
+```R
+# Print SMDs
+print(unmatched_smd)
+print(matched_smd)
+```
       **Standard Mean Deviation:**
       By examining the SMD for unmatched and matched data under different covariances, we assess the effectiveness of the matching process in achieving balance between the treatment and control groups. A lower SMD indicates a smaller       difference between the two groups. For instance, in this example, the SMD for the variable "AGE" is 0.76 for unmatched data and 0.06 for matched data. This suggests that the treatment group in the matched data is more similar to the control group compared to the unmatched data.
       ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/output_SMD.PNG)
      
 ### 8. Calculate Mean Differences:
    - Call the `calculate_mean_diff` function with parameters `matched_data`, `treatment_var`, and `vars_of_interest` to calculate mean differences for the variables of interest.
-     ```R
-     # Calculate mean differences
-      mean_diff <- calculate_mean_diff(data = matched_data, treatment_var = treatment_var, vars_of_interest = vars_of_interest)
-     ```
+```R
+# Calculate mean differences
+mean_diff <- calculate_mean_diff(data = matched_data, treatment_var = treatment_var, vars_of_interest = vars_of_interest)
+```
    - The output provides the mean differences of `vars_of_interest`.
-     ```R
-      # Print mean differences
-      print(mean_diff)
-     ```
+```R
+# Print mean differences
+print(mean_diff)
+```
       **Mean difference:**
       Example for the interpretation: A mean difference of -666.6 for the variable EARNINGS_PRE indicates that, on average, individuals who participated in the training program had earnings that were $666.6 less before the training program compared to those who did not participate in the training program. 
 Additionally, their earnings after the training program are, on average, $3000 more than those who did not participate in the training program, as indicated by the mean difference of 3000 for the variable EARNINGS_POST.
