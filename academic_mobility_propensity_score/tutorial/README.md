@@ -41,15 +41,18 @@ Approximately 30-45 minutes
 Ensure you have R (version 3.6.0 or higher) environment on your local machine.
 
 Install the required R packages by running the following commands:
-	```
+
+
+```R
 install.packages("Matching")
 install.packages("tableone")
-	```
+```
 
-## Input Data
+## Input Data ([Digital behavior Data](https://www.gesis.org/en/institute/digital-behavioral-data))
 
 This method can work with any dataset containing variables of interest, a treatment indicator, and covariates. For example:
-- Sample data for job training program analysis.
+- [The 'Call me sexist but' Dataset (CMSB)](https://search.gesis.org/research_data/SDN-10.7802-2251?doi=10.7802/2251) to Assessing the Impact of Gender Bias in Social Media Posts. 
+Propensity score matching can be used to determine if an author's gender influences bias in social media posts by creating comparable groups based on observable characteristics. This method allows researchers to assess gender's causal impact on bias while controlling for potential confounding factors, providing insights into online discourse dynamics.
 
 ## Step-wise Guide
 
@@ -67,7 +70,7 @@ To utilize the propensity score matching technique for assessing the impact of j
 
 ### 3. Load Input Dataset:
    - Execute the following lines to load the input dataset into R as `job_training_data.`:
-     ```
+     ```R
       # Get the directory path of the main_script.R
       script_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
       
@@ -77,13 +80,13 @@ To utilize the propensity score matching technique for assessing the impact of j
 
 ### 4. Define Functions:
    - Execute this line to define the necessary functions from "propensity_matching_functions.R":
-     ```
+     ```R
      source(file.path(script_dir, "propensity_matching_functions.R"))
      ```
 
 ### 5. Define Treatment Variable and Covariates:
    - Define the treatment variable (`treatment_var`) as "TREATED" and covariates (`covariates`) as relevant variables such as age, education level, and years of experience.
-     ```
+     ```R
         # Define variables
          treatment_var <- "TREATED"  # Specify your treatment variable
          covariates <- c("AGE", "EDUCATION", "EXPERIENCE")  # Specify relevant covariates
@@ -91,7 +94,7 @@ To utilize the propensity score matching technique for assessing the impact of j
 
 ### 6. Perform Propensity Score Matching:
    - Call the `perform_propensity_matching` function with parameters `job_training_data`, `treatment_var`, and `covariates` to conduct propensity score matching:
-     ```
+     ```R
         # Perform propensity score matching
          matching_results <- perform_propensity_matching(data = job_training_data,
                                                    treatment_var = treatment_var,
@@ -101,13 +104,13 @@ To utilize the propensity score matching technique for assessing the impact of j
 
 ### 7. Define Variables of Interest:
    - Define the variables of interest (`vars_of_interest`) based on the employment outcomes you want to assess.
-     ```
+     ```R
       vars_of_interest <- c("EARNINGS_PRE", "EARNINGS_POST")  # Specify variables for mean difference calculation
      ```
      
 ### 8. Calculate Mean Differences:
    - Call the `calculate_mean_diff` function with parameters `matched_data`, `treatment_var`, and `vars_of_interest` to calculate mean differences for the variables of interest.
-     ```
+     ```R
      # Calculate mean differences
       mean_diff <- calculate_mean_diff(data = matched_data, treatment_var = treatment_var, vars_of_interest = vars_of_interest)
      ```
