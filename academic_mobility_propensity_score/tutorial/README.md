@@ -145,6 +145,7 @@ mean_diff <- calculate_mean_diff(data = matched_data, treatment_var = treatment_
 # Print mean differences
 print(mean_diff)
 ```
+-
       **Mean difference:**
       Example for the interpretation: A mean difference of -666.6 for the variable EARNINGS_PRE indicates that, on average, individuals who participated in the training program had earnings that were $666.6 less before the training program compared to those who did not participate in the training program. 
 Additionally, their earnings after the training program are, on average, $3000 more than those who did not participate in the training program, as indicated by the mean difference of 3000 for the variable EARNINGS_POST.
