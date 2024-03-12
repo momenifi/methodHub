@@ -2,17 +2,17 @@
 script_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
 
 # Example usage:
-data_sample <- read.table(file.path(script_dir, "mydata_sample.csv"), header = TRUE, sep = ",", quote = "\r", dec = ".")
+job_training_data <- read.table(file.path(script_dir, "job_training_data.csv"), header = TRUE, sep = ",", quote = "\r", dec = ".")
 
 # Source the file containing functions and libraries
 source(file.path(script_dir, "propensity_matching_functions.R"))
 
 # Define variables
-treatment_var <- "MOBILE"  # Specify your treatment variable
-covariates <- c("REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", "AGE")
+treatment_var <- "TREATED"  # Specify your treatment variable
+covariates <- c("AGE", "EDUCATION", "EXPERIENCE")  # Specify relevant covariates
 
 # Perform propensity score matching
-matching_results <- perform_propensity_matching(data = data_sample,
+matching_results <- perform_propensity_matching(data = job_training_data,
                                                 treatment_var = treatment_var,
                                                 covariates = covariates)
 
@@ -27,7 +27,7 @@ matched_data <- matching_results$matched_data
 print(unmatched_smd)
 print(matched_smd)
 
-vars_of_interest <- c("PPY", "CPP", "COPP")  # Specify variables for mean difference calculation
+vars_of_interest <- c("EARNINGS_PRE", "EARNINGS_POST")  # Specify variables for mean difference calculation
 
 # Calculate mean differences
 mean_diff <- calculate_mean_diff(data = matched_data, treatment_var = treatment_var, vars_of_interest = vars_of_interest)
