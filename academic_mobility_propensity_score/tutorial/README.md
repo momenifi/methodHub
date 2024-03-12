@@ -42,9 +42,9 @@ Ensure you have R (version 3.6.0 or higher) environment on your local machine.
 
 Install the required R packages by running the following commands:
 
-	```
-install.packages("Matching")
-install.packages("tableone")
+	```R
+	install.packages("Matching")
+	install.packages("tableone")
 	```
 
 ## Input Data
