@@ -122,6 +122,7 @@ print(matched_smd)
  -
     **Standard Mean Deviation:**
       By examining the SMD for unmatched and matched data under different covariances, we assess the effectiveness of the matching process in achieving balance between the treatment and control groups. A lower SMD indicates a smaller       difference between the two groups. For instance, in this example, the SMD for the variable "AGE" is 0.76 for unmatched data and 0.06 for matched data. This suggests that the treatment group in the matched data is more similar to the control group compared to the unmatched data.
+      
       ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/output_SMD.PNG) 
 
 ### 8. Define Variables of Interest:
@@ -147,18 +148,14 @@ print(mean_diff)
       **Mean difference:**
       Example for the interpretation: A mean difference of -666.6 for the variable EARNINGS_PRE indicates that, on average, individuals who participated in the training program had earnings that were $666.6 less before the training program compared to those who did not participate in the training program. 
 Additionally, their earnings after the training program are, on average, $3000 more than those who did not participate in the training program, as indicated by the mean difference of 3000 for the variable EARNINGS_POST.
+
       ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/output_mainDiff.PNG)
       
-      
-      
- By following these steps, you can successfully conduct propensity score matching analysis to assess the impact of academic mobility on research productivity and collaboration indicators, focusing on the variables of interest "PPY", "CPP", and "COPP".
-## Conclusion
+   
 
+## Conclusion
 In conclusion, this tutorial provides a detailed overview of propensity score matching techniques and their application in assessing the impact of job training programs on employment outcomes. By following the step-by-step guide and sample code provided, learners gain a comprehensive understanding of how to implement propensity score matching in R and interpret the results effectively.
 
-## Conclusion
-
-In conclusion, this tutorial provides a detailed overview of propensity score matching techniques and their application in assessing the impact of academic mobility on research productivity, received citations, and collaboration indicators. By following the step-by-step guide and sample code provided, learners gain a comprehensive understanding of how to implement propensity score matching in R and interpret the results effectively.
 
 **How the Learning Goal is Achieved**
 
