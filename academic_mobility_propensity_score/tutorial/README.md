@@ -51,7 +51,8 @@ install.packages("tableone")
 ## Input Data ([Digital behavior Data](https://www.gesis.org/en/institute/digital-behavioral-data))
 
 This method can work with any dataset containing variables of interest, a treatment indicator, and covariates. For example:
-- Sample data for job training program analysis.
+- [The 'Call me sexist but' Dataset (CMSB)](https://search.gesis.org/research_data/SDN-10.7802-2251?doi=10.7802/2251) to Assessing the Impact of Gender Bias in Social Media Posts. 
+Propensity score matching can be used to determine if an author's gender influences bias in social media posts by creating comparable groups based on observable characteristics. This method allows researchers to assess gender's causal impact on bias while controlling for potential confounding factors, providing insights into online discourse dynamics.
 
 ## Step-wise Guide
 
