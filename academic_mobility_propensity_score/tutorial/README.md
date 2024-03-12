@@ -98,7 +98,7 @@ covariates <- c("AGE", "EDUCATION", "EXPERIENCE")  # Specify relevant covariates
 
 ### 6. Perform Propensity Score Matching:
    - Call the `perform_propensity_matching` function with parameters `job_training_data`, `treatment_var`, and `covariates` to conduct propensity score matching:
-### 7. Perform Propensity Score Matching and Get the Matched Data:
+### 7. Perform Propensity Score Matching and Get the SMD for Unmatched and Matched Data:
    - Perform propensity score matching
 ```R
 matching_results <- perform_propensity_matching(data = job_training_data,
@@ -107,23 +107,23 @@ matching_results <- perform_propensity_matching(data = job_training_data,
 # Matched data
 matched_data <- matching_results$matched_data
 ```
-   - The output includes standardized mean differences (SMDs) of unmatched/matched data (`unmatched_smd` and `matched_smd`) and the matched data (`matched_data`).
+   - The output includes  the matched data (`matched_data`).
 
-      **Standard Mean Deviation:**
-      By examining the SMD for unmatched and matched data under different covariances, we assess the effectiveness of the matching process in achieving balance between the treatment and control groups. A lower SMD indicates a smaller       difference between the two groups. For instance, in this example, the SMD for the variable "AGE" is 0.76 for unmatched data and 0.06 for matched data. This suggests that the treatment group in the matched data is more similar to the control group compared to the unmatched data.
-      ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/output_SMD.PNG)
+
 
 ### 8. Compare the SMD in Unmatched and Matched Data:
 ```R
+# Access SMDs of unmatched and matched data
+unmatched_smd <- matching_results$unmatched_smd
+matched_smd <- matching_results$matched_smd
 # Print SMDs
 print(unmatched_smd)
 print(matched_smd)
 ```
 
-
       **Standard Mean Deviation:**
       By examining the SMD for unmatched and matched data under different covariances, we assess the effectiveness of the matching process in achieving balance between the treatment and control groups. A lower SMD indicates a smaller       difference between the two groups. For instance, in this example, the SMD for the variable "AGE" is 0.76 for unmatched data and 0.06 for matched data. This suggests that the treatment group in the matched data is more similar to the control group compared to the unmatched data.
-      ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/output_SMD.PNG)
+      ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/output_SMD.PNG) 
 
 ### 9. Define Variables of Interest:
    - Define the variables of interest (`vars_of_interest`) based on the employment outcomes you want to assess.
