@@ -11,6 +11,7 @@
 
 ## Description
 
+In this tutorial, we illustrate how propensity score matching using method [XYZ](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/method/) can be used to estimate the effect of a treatment or intervention by accounting for the co-variates that predict the receiving treatment. 
 This tutorial provides a comprehensive guide on using propensity score matching techniques in R to assess the impact of academic mobility on research productivity, received citations, and collaboration indicators among researchers. It includes step-by-step instructions, example code, and explanations to facilitate understanding and implementation.
 
 In this example, the propensity score method is employed to estimate the causal effect of academic mobility on researchers' outcomes in terms of: 
