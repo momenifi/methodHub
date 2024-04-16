@@ -25,9 +25,22 @@ It is used to construct control/treatment groups in scientific studies, in such 
     **Example**: Researchers might investigate the impact of a new medication on reducing symptoms of a chronic disease. By matching patients who received the medication with similar patients who did not, they can assess whether the medication led to improvements in symptom severity or overall health.
 
 - **Labor Market Studies**: [Analyzing the effects of job training programs on employment outcomes](https://www.nber.org/system/files/working_papers/w6829/w6829.pdf)
+
+   **Description**: This involves analyzing the effects of job training programs, employment services, or labor market policies on employment outcomes such as job retention, wage growth, or career advancement. Propensity score matching helps researchers compare the employment outcomes of individuals who participated in a program or intervention with those who did not, while controlling for factors like education level, work experience, and industry sector.
+
+   **Example**: A study might examine the impact of a government-sponsored job training program on the employment rates of participants. By matching program participants with similar individuals who did not participate, researchers can assess whether the training program increased participants' likelihood of finding and maintaining employment.
+
 - **At-Risk Youth: Mentoring Program Impact**: [examine the impact of a mentoring program on academic achievement outcomes among at-risk youth](https://books.google.de/books?hl=de&lr=&id=5Y_MAwAAQBAJ&oi=fnd&pg=PP1&dq=Propensity+Score+Analysis:+Statistical+Methods+and+Applications.+Sage+Publications.&ots=WY57gK_A9w&sig=h8usM9tYzJGz-RRhnca-iyx0cnA#v=onepage&q=Propensity%20Score%20Analysis%3A%20Statistical%20Methods%20and%20Applications.%20Sage%20Publications.&f=false)
+
+   **Description**: This involves examining the impact of mentoring programs on academic achievement outcomes among at-risk youth, such as high school dropout rates, academic performance, or college enrollment. Propensity score matching allows researchers to compare the academic outcomes of youth who participated in a mentoring program with those who did not, while controlling for factors like socioeconomic background, parental involvement, and prior academic performance.
+
+   **Example**: Researchers might investigate the impact of a mentoring program on reducing dropout rates among at-risk high school students. By matching program participants with similar students who did not receive mentoring, they can assess whether the program led to improvements in graduation rates or academic performance.
+
 - **Academic Mobility of Researchers**: [Assessing the impact of academic mobility on scientific outcomes](https://doi.org/10.1016/j.joi.2022.101280)
 
+   **Description**: This involves assessing the impact of academic mobility, such as international collaborations, sabbaticals, or research exchanges, on scientific outcomes such as publications, citations, or research productivity. Propensity score matching helps researchers compare the research outcomes of academics who engaged in mobility experiences with those who did not, while controlling for factors like disciplinary field, academic rank, and prior publication record.
+
+   **Example**: A study might explore the impact of participating in an international research collaboration on an academic's publication output. By matching academics who engaged in collaborations with similar academics who did not, researchers can assess whether international mobility positively influences research productivity or citation rates.
 ## Structure
 The method consists of two main functions located in  ["propensity_matching_functions.R"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/method/propensity_matching_functions.R):
 1. `perform_propensity_matching`: Conducts propensity score matching and calculates standardized mean differences (SMDs) for unmatched and matched data.
