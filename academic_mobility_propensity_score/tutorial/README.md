@@ -68,7 +68,7 @@ We employ the propensity score matching technique to evaluate the impact of job 
 
 We regard AGE, EDUCATION, and EXPERIENCE as covariates and EARNINGS_PRE and EARNINGS_POST to evaluate the job training program's impact (Standardized Mean Difference). A value of 1 in the **TREATED** column signifies the treatment group, while a value of 0 represents the control group.
 
-Below, you'll find instructions on applying the XPropensity Score Matching method to the [sample data](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/job_training_data.csv):
+Below, you'll find instructions on applying the Propensity Score Matching method to the [sample data](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/job_training_data.csv):
 
 
 ### 1. Download Files:
