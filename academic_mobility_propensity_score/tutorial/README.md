@@ -56,8 +56,20 @@ Propensity score matching can be used to determine if an author's gender influen
 
 ## Step-wise Guide
 
-We utilize the propensity score matching technique for assessing the impact of job training programs on employment outcomes.
-In the following you can find instructions on how to apply the XPropensity Score Matching method on a [sample data](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/job_training_data.csv).
+We employ the propensity score matching technique to evaluate the impact of job training programs on employment outcomes. The dataset at our disposal includes the following columns:
+
+- **ID**: Employee identifier
+- **AGE**: Age of the employee
+- **EDUCATION**: Education level of the employee
+- **EXPERIENCE**: Years of experience of the employee
+- **EARNINGS_PRE**: Earnings before treatment program
+- **EARNINGS_POST**: Earnings after treatment program
+- **TREATED**: Indicates whether the employee received the job training program (1 for received, 0 for not received)
+
+We regard AGE, EDUCATION, and EXPERIENCE as covariates and EARNINGS_PRE and EARNINGS_POST to evaluate the job training program's impact (Standardized Mean Difference). A value of 1 in the **TREATED** column signifies the treatment group, while a value of 0 represents the control group.
+
+Below, you'll find instructions on applying the XPropensity Score Matching method to the [sample data](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/job_training_data.csv):
+
 
 ### 1. Download Files:
    - Download the following files into a single folder:
