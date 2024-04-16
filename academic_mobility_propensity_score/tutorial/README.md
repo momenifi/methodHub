@@ -9,7 +9,7 @@
 
 ## Description
 
-This tutorial offers a detailed walkthrough on leveraging propensity score matching techniques in R to evaluate the influence of job training programs on employment outcomes. It specifically delves into variables such as age, education level, years of experience, earnings before and after the training program, and participation in the training program (treatment variable). The guide comprises step-by-step instructions, example code snippets, and elucidations to facilitate comprehension and implementation.
+This tutorial offers a detailed walkthrough on leveraging [propensity score matching](https://en.wikipedia.org/wiki/Propensity_score_matching) techniques in R to evaluate the influence of job training programs on employment outcomes. It specifically delves into variables such as age, education level, years of experience, earnings before and after the training program, and participation in the training program (treatment variable). The guide comprises step-by-step instructions, example code snippets, and elucidations to facilitate comprehension and implementation.
 
 In this instance, we utilize the propensity score method to estimate the causal impact of job training programs on employment outcomes. The treatment variable *"TREATED"* distinguishes individuals who underwent the job training program *(TREATED = 1)* as the treatment group and those who did not *(TREATED = 0)* as the control group. The objective is to achieve covariate balance, particularly concerning age, education level, and years of experience, between the treatment and control groups. Through propensity score matching, this method enables a more precise assessment of job training programs' impact on employment outcomes.
 
