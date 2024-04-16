@@ -38,9 +38,10 @@ It is used to construct control/treatment groups in scientific studies, in such 
 
 - **Academic Mobility of Researchers**: [Assessing the impact of academic mobility on scientific outcomes](https://doi.org/10.1016/j.joi.2022.101280)
 
-   **Description**: This involves assessing the impact of academic mobility, such as international collaborations, sabbaticals, or research exchanges, on scientific outcomes such as publications, citations, or research productivity. Propensity score matching helps researchers compare the research outcomes of academics who engaged in mobility experiences with those who did not, while controlling for factors like disciplinary field, academic rank, and prior publication record.
+   **Description**: This involves assessing the impact of academic mobility, such as international collaborations, sabbaticals, or research exchanges, on scientific outcomes such as publications, citations, or research productivity. Propensity score matching helps researchers compare the research outcomes of academics who engaged in mobility experiences with those who did not, while controlling for factors like disciplinary field, gender, age, international collaboration, and prior publication record.
 
    **Example**: A study might explore the impact of participating in an international research collaboration on an academic's publication output. By matching academics who engaged in collaborations with similar academics who did not, researchers can assess whether international mobility positively influences research productivity or citation rates.
+
 ## Structure
 The method consists of two main functions located in  ["propensity_matching_functions.R"](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/method/propensity_matching_functions.R):
 1. `perform_propensity_matching`: Conducts propensity score matching and calculates standardized mean differences (SMDs) for unmatched and matched data.
