@@ -1,8 +1,7 @@
 # Applying Propensity Score Matching in R
 
 ## Description
-
-The propensity score matching method is used to estimate the causal effect of a treatment, intervention, or exposure by balancing covariates between treatment and control groups. It aims to reduce bias and confounding in observational studies by creating comparable groups based on propensity scores.
+Propensity score matching is a method employed across diverse fields of research to assess the causal impact of treatments, interventions, or exposures in observational studies. By equating covariates between treatment and control groups, it mitigates bias and confounding, thereby enabling the estimation of causal effects. 
 
 In essence, propensity score matching constructs control and treatment groups that are highly comparable in terms of their individual characteristics. This process mitigates the influence of potential confounders, thus facilitating more accurate causal inferences.
 ![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/method/PS_explanation.jpg)
