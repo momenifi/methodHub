@@ -56,7 +56,8 @@ Propensity score matching can be used to determine if an author's gender influen
 
 ## Step-wise Guide
 
-To utilize the propensity score matching technique for assessing the impact of job training programs on employment outcomes, follow these steps:
+We utilize the propensity score matching technique for assessing the impact of job training programs on employment outcomes.
+In the following you can find instructions on how to apply the XPropensity Score Matching method on a [sample data](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/job_training_data.csv).
 
 ### 1. Download Files:
    - Download the following files into a single folder:
