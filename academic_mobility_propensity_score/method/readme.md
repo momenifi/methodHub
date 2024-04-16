@@ -5,13 +5,13 @@
 The propensity score matching method is used to estimate the causal effect of a treatment, intervention, or exposure by balancing covariates between treatment and control groups. It aims to reduce bias and confounding in observational studies by creating comparable groups based on propensity scores.
 
 In essence, propensity score matching constructs control and treatment groups that are highly comparable in terms of their individual characteristics. This process mitigates the influence of potential confounders, thus facilitating more accurate causal inferences.
-
+![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/method/PS_explanation.jpg)
 To elucidate, consider an example where two distinct groups of entities, represented by balls or ducks in our illustrations, are subjected to different conditions – treatment and control. The initial setup shows these entities with varying characteristics, such as size and color. The subsequent arrangement, either through sorting or linking, aims to pair entities with similar attributes across the treatment and control groups.
 
 In the ball analogy, balls of similar size and color are matched between the treatment and control groups, creating pairs where each treated entity corresponds to a similar untreated entity. Similarly, in the duck analogy, ducks with comparable features, like color and size, are connected to their counterparts in the comparison group, ensuring a balanced representation.
 
 It is used to construct control/treatment groups in scientific studies, in such a way that individuals in the control group are as similar as possible to individuals in the treatment group. 
-![Image Alt Text](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/method/PS_explanation.jpg)
+
 
 ## Social Science Use Cases
 - **Education Policy Evaluation**: [Assessing the impact of educational interventions on student outcomes](https://telearn.hal.science/hal-00190019/document)
