@@ -15,10 +15,15 @@ It is used to construct control/treatment groups in scientific studies, in such 
 ## Social Science Use Cases
 - **Education Policy Evaluation**: [Assessing the impact of educational interventions on student outcomes](https://telearn.hal.science/hal-00190019/document)
 
-**Description**:This involves assessing the effects of educational interventions, such as curriculum changes, teaching methods, or educational programs, on student outcomes. Researchers use propensity score matching to compare the outcomes of students who received the intervention with those who did not, while controlling for potential confounding variables like socioeconomic status or prior academic achievement.
+    **Description**:This involves assessing the effects of educational interventions, such as curriculum changes, teaching methods, or educational programs, on student outcomes. Researchers use propensity score matching to compare the outcomes of students who received the intervention with those who did not, while controlling for potential confounding variables like socioeconomic status or prior academic achievement.
 
-**Example**: A study might examine the impact of a new teaching method on student performance in mathematics. By matching students who received the new method with similar students who did not, researchers can determine whether the intervention led to improvements in math scores.
+    **Example**: A study might examine the impact of a new teaching method on student performance in mathematics. By matching students who received the new method with similar students who did not, researchers can determine whether the intervention led to improvements in math scores.
 - **Healthcare Interventions**: [Evaluating the effectiveness of medical treatments on patient outcomes](https://www.tandfonline.com/doi/pdf/10.1080/00273171.2011.568786)
+
+    **Description**: This entails evaluating the effectiveness of medical treatments, interventions, or healthcare programs on patient outcomes. Propensity score matching allows researchers to compare the outcomes of patients who received a particular treatment with those who did not, while adjusting for factors like age, gender, and medical history.
+
+    **Example**: Researchers might investigate the impact of a new medication on reducing symptoms of a chronic disease. By matching patients who received the medication with similar patients who did not, they can assess whether the medication led to improvements in symptom severity or overall health.
+
 - **Labor Market Studies**: [Analyzing the effects of job training programs on employment outcomes](https://www.nber.org/system/files/working_papers/w6829/w6829.pdf)
 - **At-Risk Youth: Mentoring Program Impact**: [examine the impact of a mentoring program on academic achievement outcomes among at-risk youth](https://books.google.de/books?hl=de&lr=&id=5Y_MAwAAQBAJ&oi=fnd&pg=PP1&dq=Propensity+Score+Analysis:+Statistical+Methods+and+Applications.+Sage+Publications.&ots=WY57gK_A9w&sig=h8usM9tYzJGz-RRhnca-iyx0cnA#v=onepage&q=Propensity%20Score%20Analysis%3A%20Statistical%20Methods%20and%20Applications.%20Sage%20Publications.&f=false)
 - **Academic Mobility of Researchers**: [Assessing the impact of academic mobility on scientific outcomes](https://doi.org/10.1016/j.joi.2022.101280)
