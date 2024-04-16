@@ -13,6 +13,18 @@ This tutorial provides a comprehensive guide on using propensity score matching 
 
 In this example, the propensity score method is employed to estimate the causal effect of job training programs on employment outcomes. The treatment variable *"TREATED"* distinguishes between individuals who participated in the job training program *(TREATED = 1)* as the treatment group and those who did not *(TREATED = 0)* as a control group. The method aims to balance covariates such as age, education level, and years of experience between the treatment and control groups. By achieving covariate balance through propensity score matching, the method allows for a more accurate assessment of the impact of job training programs on employment outcomes.
 
+ The [sample dataset](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/job_training_data.csv) at our disposal includes the following columns:
+
+- **ID**: Employee identifier
+- **AGE**: Age of the employee
+- **EDUCATION**: Education level of the employee
+- **EXPERIENCE**: Years of experience of the employee
+- **EARNINGS_PRE**: Earnings before treatment program
+- **EARNINGS_POST**: Earnings after treatment program
+- **TREATED**: Indicates whether the employee received the job training program (1 for received, 0 for not received)
+
+We regard AGE, EDUCATION, and EXPERIENCE as covariates and EARNINGS_PRE and EARNINGS_POST to evaluate the job training program's impact (Standardized Mean Difference). A value of 1 in the **TREATED** column signifies the treatment group, while a value of 0 represents the control group.
+
 Standardized Mean Difference (SMD) assesses the covariance balance between treatment and control groups before and after matching. SMD is commonly used in propensity score matching, with a lower SMD indicating better balance and greater comparability regarding covariates. Understanding the sign and magnitude of Mean Differences provides insights into the direction and magnitude of the impact of job training programs on employment outcomes.
 
 ## Target Audience
@@ -56,17 +68,7 @@ Propensity score matching can be used to determine if an author's gender influen
 
 ## Step-wise Guide
 
-We employ the propensity score matching technique to evaluate the impact of job training programs on employment outcomes. The dataset at our disposal includes the following columns:
-
-- **ID**: Employee identifier
-- **AGE**: Age of the employee
-- **EDUCATION**: Education level of the employee
-- **EXPERIENCE**: Years of experience of the employee
-- **EARNINGS_PRE**: Earnings before treatment program
-- **EARNINGS_POST**: Earnings after treatment program
-- **TREATED**: Indicates whether the employee received the job training program (1 for received, 0 for not received)
-
-We regard AGE, EDUCATION, and EXPERIENCE as covariates and EARNINGS_PRE and EARNINGS_POST to evaluate the job training program's impact (Standardized Mean Difference). A value of 1 in the **TREATED** column signifies the treatment group, while a value of 0 represents the control group.
+We employ the propensity score matching technique to evaluate the impact of job training programs on employment outcomes.
 
 Below, you'll find instructions on applying the Propensity Score Matching method to the [sample data](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/tutorial/job_training_data.csv):
 
