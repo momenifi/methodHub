@@ -75,7 +75,7 @@ Overall, while LSH is primarily a computational technique, its applications exte
 
 
 
-## Flow Diagram (Optional)
+## Flow Diagram 
 Below is a simplified flow diagram illustrating the process of using Locality Sensitive Hashing (LSH) to search for similar tweets within a document corpus:
 
 graph TD;
@@ -98,12 +98,12 @@ In this flow:
 - **Output Similar Tweets**: The similar tweets are presented as the final output of the search process.
 
 
-## Sample Input and output data (Optional)
-###Input:
+## Sample Input and output data
+**Input:**
 Here is a tweet to search in all tweets:
 '#FollowFriday @France_Inte @PKuchly57 @Milipol_Paris for being top engaged members in my community this week :)'
 
-###Output:
+**Output:**
 Here are two most similar tweets to the given tweet:
 '
 document contents: #ShareTheLove @oymgroup @musicartisthere for being top HighValue members this week :) @nataliavas http://t.co/IWSDMtcayt
@@ -146,7 +146,7 @@ To utilize this tutorial effectively, follow these steps:
 Follow these steps to install Jupyter Notebook, download the tutorial materials, navigate to the directory, open the notebook, and execute the provided code in the Jupyter Notebook environment.
 
 
-## conclusion (Optional)
+## conclusion 
 In conclusion, this tutorial has provided a comprehensive overview of utilizing Locality Sensitive Hashing (LSH) for document search, particularly focusing on finding similar tweets. 
 Through this tutorial you've gained valuable insights into the application of LSH in document search tasks, which can be useful in various contexts such as information retrieval, text similarity analysis, and recommendation systems.
 
