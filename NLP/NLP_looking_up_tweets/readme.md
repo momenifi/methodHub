@@ -22,6 +22,8 @@ Before starting this tutorial, you should have the following:
 
 ## Environment Setup
 
+**How to Use:**
+
 - **Install Python and Jupyter Notebook (Optional):**
   - If you don't have Python and Jupyter Notebook installed on your system, you can follow these steps:
     1. Install Python from the official website: [Python Downloads](https://www.python.org/downloads/).
@@ -35,7 +37,9 @@ Before starting this tutorial, you should have the following:
   - If you prefer not to install Python and Jupyter Notebook locally, you can run the notebook on Google Colab, a cloud-based platform for running Python notebooks.
     1. Open your web browser and go to [Google Colab](https://colab.research.google.com/).
     2. Click on "File" > "Upload Notebook" and select the notebook file "Looking up the tweets.ipynb" from your local machine.
-    3. Once the notebook is uploaded, you can execute the code cells and interact with the tutorial directly in your browser.
+    3. Before uploading, compress the folder containing the notebook file and other necessary files into a zip file.
+    4. Once the zip file is uploaded, extract its contents in Google Colab.
+    5. Open the notebook "Looking up the tweets.ipynb" and execute the code cells as instructed in the tutorial.
 
 ## Tutorial content
 In this tutorial, we'll use Locality Sensitive Hashing (LSH) to search a document. The following sections will be covered:
