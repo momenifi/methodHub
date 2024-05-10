@@ -1,17 +1,25 @@
-# [Method Name]
+
+# Method Title
+The title should be meaningful and easy to follow. It should reflect relevance to social science, if applicable 
 
 ## Description
-- Provide a brief and clear description of the method, its purpose, and what it aims to achieve.
+- Provide a brief and clear description of the method, its purpose, and what it aims to achieve. Add a link to a related paper from social science 
+domain and show how your method can be applied to solve that research question.  
 For example,
 4TCT is a specialized tool designed for the efficient collection of textual data from the 4chan platform. It automates the process of gathering posts from various boards, aiming to facilitate research and analysis in social science and computational linguistics.
 This tool is particularly useful for analyzing online discourse, community dynamics, and trends within the 4chan ecosystem. It can support studies on topics like meme culture, information dissemination, and the impact of anonymous social media on public opinion.
 
-## Social Science Usecase(s)
-- Include usecases from social sciences that would make this method applicable in a certain scenario.
-For example,
-A team of social scientists is conducting a research project to explore online communities' influence on language evolution and cultural trends. They decide to focus on 4chan, known for its anonymous and varied user base, to capture authentic and unfiltered expressions. The 4chan Data Collection Tool becomes an essential component in their data acquisition strategy.
+## Keywords
+Few keywords placed after description highlighting the nature of the method 
 
-## Structure
+## Science Usecase(s)
+- Include usecases from social sciences that would make this method applicable in a certain scenario. 
+The use cases or research questions mentioned should arise from the latest social science literature cited in the description.
+For example,
+How to collect 4chan data from on political discourse from dates ..
+ 
+
+## Repo Structure
 - Explain the overall structure of the method, including directories, key files, and their functions.
 For example,
 The tool's architecture includes a src/ directory for core scripts, with requester.py handling data collection, board.py managing board-specific requests, and utils.py for auxiliary functions. Data is stored in a data/ directory created upon initiation, and documentation is available in docs/.
@@ -30,7 +38,7 @@ Dependencies are listed in requirements.txt and can be installed via pip install
 - The method need to be executed on a specific architecture (GPUs, Hadoop cluster etc.)
 
 
-## Input Data (DBD Datasets)
+## Input Data (Digital Behavioral Data Datasets)
 - Link(s) to the DBD dataset(s) that this method can work with
 For GESIS DBD datasets (https://www.gesis.org/en/institute/digital-behavioral-data)
 
