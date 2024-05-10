@@ -1,4 +1,4 @@
-# Looking up the most Similar Tweets to a text
+# Discovering Similar Tweets Using Locality Sensitive Hashing
 
 
 ## Learning Objectives
