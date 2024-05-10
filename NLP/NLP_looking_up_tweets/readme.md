@@ -21,11 +21,21 @@ Before starting this tutorial, you should have the following:
 - Familiarity with text processing libraries such as NLTK or spaCy
 
 ## Environment Setup
-To run this tutorial locally, make sure you have Python installed on your machine. Additionally, install the required libraries using the following command:
 
-```
-pip install nltk
-```
+- **Install Python and Jupyter Notebook (Optional):**
+  - If you don't have Python and Jupyter Notebook installed on your system, you can follow these steps:
+    1. Install Python from the official website: [Python Downloads](https://www.python.org/downloads/).
+    2. After installing Python, you can install Jupyter Notebook using pip:
+       ```
+       pip install notebook
+       ```
+    3. Once Jupyter Notebook is installed, you can proceed to the next step.
+
+- **Run on Google Colab (Alternative):**
+  - If you prefer not to install Python and Jupyter Notebook locally, you can run the notebook on Google Colab, a cloud-based platform for running Python notebooks.
+    1. Open your web browser and go to [Google Colab](https://colab.research.google.com/).
+    2. Click on "File" > "Upload Notebook" and select the notebook file "Looking up the tweets.ipynb" from your local machine.
+    3. Once the notebook is uploaded, you can execute the code cells and interact with the tutorial directly in your browser.
 
 ## Tutorial content
 In this tutorial, we'll use Locality Sensitive Hashing (LSH) to search a document. The following sections will be covered:
