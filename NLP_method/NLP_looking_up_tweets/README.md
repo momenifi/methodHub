@@ -14,8 +14,21 @@ Text similarity, Tweet analysis, Locality Sensitive Hashing (LSH), Python
 - **Political Science**: Understanding political discourse and public opinion.
 - **Psychological Research**: Analyzing textual data from online forums or therapy sessions.
 
+
 ## Repo Structure
-The method contains four sections covering document embeddings, tweet lookup, similarity computation, and hash table creation.
+The repository is organized as follows:
+- **Folders**:
+  - `__pycache__`: Contains cached Python bytecode files.
+  - `data`: Stores data used by the method.
+  - `images`: Holds images used in the method or tutorial.
+  - `tmp2`: Contains additional files and data, including stopwords and the `twitter_samples` dataset.
+
+- **Files**:
+  - `Looking up the tweets.ipynb`: The main code implemented as a Jupyter Notebook. It contains four sections covering document embeddings, tweet lookup, similarity computation, and hash table creation..
+  - `readme.md`: Guideline document providing instructions for using the method.
+  - `utils.py`: Contains essential functions needed for the method's functionality.
+  - `w4_unitest.py`: Unit test file to verify correct execution of the code.
+
 
 ## Environment Setup
 Requires Python and the NLTK library. Install NLTK using:
@@ -29,7 +42,7 @@ pip install nltk
 No specific hardware requirements.
 
 ## Input Data
-Digital Behavioral Data (DBD) Dataset, such as social media posts.
+Digital Behavioral Data (DBD) Dataset, such as social media posts like Tweeter(https://data.gesis.org/tweetskb/)
 
 ## Sample Input and Output Data
 ### Input:
@@ -80,54 +93,9 @@ Follow these steps to install Jupyter Notebook, download the tutorial materials,
 ## Contact Details
 For questions or feedback, contact [email address] or [social media handles].
 
-## Publication (Optional)
-N/A
 
-## Acknowledgements (if any)
+## Acknowledgements 
 Special thanks to DeepLearning.AI on Coursera for providing the assignment used in this tutorial.
-
-
-
-
-# Method Title
-The title should be meaningful and easy to follow. It should reflect relevance to social science, if applicable 
-
-## Description
-- Provide a brief and clear description of the method, its purpose, and what it aims to achieve. Add a link to a related paper from social science 
-domain and show how your method can be applied to solve that research question.  
-For example,
-4TCT is a specialized tool designed for the efficient collection of textual data from the 4chan platform. It automates the process of gathering posts from various boards, aiming to facilitate research and analysis in social science and computational linguistics.
-This tool is particularly useful for analyzing online discourse, community dynamics, and trends within the 4chan ecosystem. It can support studies on topics like meme culture, information dissemination, and the impact of anonymous social media on public opinion.
-
-## Keywords
-Few keywords placed after description highlighting the nature of the method 
-
-## Science Usecase(s)
-- Include usecases from social sciences that would make this method applicable in a certain scenario. 
-The use cases or research questions mentioned should arise from the latest social science literature cited in the description.
-For example,
-How to collect 4chan data from on political discourse from dates ..
- 
-
-## Repo Structure
-- Explain the overall structure of the method, including directories, key files, and their functions.
-For example,
-The tool's architecture includes a src/ directory for core scripts, with requester.py handling data collection, board.py managing board-specific requests, and utils.py for auxiliary functions. Data is stored in a data/ directory created upon initiation, and documentation is available in docs/.
-
-
-## Environment Setup
-- Setting up the envornment to run this method locally
-- Installing all the packages and libraries with specific versions required to run this method
-For example, 
-Requires Python 3.10.2 or 3.11.4. Suitable for environments focused on data collection and analysis.
-Dependencies are listed in requirements.txt and can be installed via pip install -r requirements.txt to ensure the tool functions correctly.
-
-
-
-
-## Input Data 
-- The input data has to be a Digital Behavioral Data (DBD) Dataset
-- You can provide link to a public DBD dataset. GESIS DBD datasets (https://www.gesis.org/en/institute/digital-behavioral-data)
 
 
 
