@@ -91,7 +91,7 @@ Follow these steps to install Jupyter Notebook, download the tutorial materials,
 
 
 ## Contact Details
-For questions or feedback, contact [email address] or [social media handles].
+For questions or feedback, contact fakhri.momeni@gesis.org.
 
 
 ## Acknowledgements 
